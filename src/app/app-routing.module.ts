@@ -21,6 +21,8 @@ import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RegisterCustomerComponent } from './register-customer/register-customer.component';
 import { RegisterAdminComponent } from './register-admin/register-admin.component';
+import { DashboardCustomerComponent } from './dashboard-customer/dashboard-customer.component';
+import { AppointmentComponent } from './appointment/appointment.component';
 
 const routes: Routes = [
   { path: '', component: DashboardComponent },
@@ -31,7 +33,9 @@ const routes: Routes = [
   { path: 'appointments', component: AppointmentViewComponent },
   { path: 'feedbacks', component: FeedbackViewComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'appointment', component: AppointmentComponent},
   { path: 'admin-login', component: AdminLoginComponent },
+  { path: 'customerpage', component: DashboardCustomerComponent },
   { path: '**', redirectTo: '' } // Redirect to login for any other route
 ];
 

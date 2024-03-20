@@ -52,7 +52,7 @@ export class LoginComponent implements OnInit {
   
     this.apiService.login(loginData).subscribe(
       () => {
-        this.router.navigate(['']); // Redirect to dashboard on successful login
+        this.router.navigate(['customerpage']); // Redirect to dashboard on successful login
       },
       (error) => {
         this.error = error.message || 'An error occurred. Please try again.'; // Display error message

@@ -19,7 +19,7 @@ func Router() *gin.Engine {
 	router.GET("/viewappointment",controller.ViewAppointment)
 	router.GET("/viewallfeedback",controller.ViewFeedback)
 	router.POST("/create", controller.CreateProfile)
-	router.POST("/appoitnment", controller.Appointment)
+	router.POST("/appointment", controller.Appointment)
 	router.POST("/login", controller.Login)
 	router.POST("/feedback", controller.Feedback)
 	router.POST("/createadmin", controller.Createadmin)

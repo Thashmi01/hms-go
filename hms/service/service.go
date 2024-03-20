@@ -191,29 +191,42 @@ func DeleteById(adminId string) error {
 	return nil
 }
 
-func ViewAppointment(patientID string) (models.Appoitment, error) {
-//fmt.Println("service")
+func ViewAppointment(patientID string) ([]models.Appoitment, error) {
+	//fmt.Println("service")
 	// Define a filter to query appointments by patient ID.
 	filter := bson.M{"name": patientID}
 
-	var appointments models.Appoitment
-	err := config.Customer_Collection.FindOne(context.Background(), filter).Decode(&appointments)
+	var appointments []models.Appoitment
+	cursor, err := config.Customer_Collection.Find(context.Background(), filter)
+	for cursor.Next(context.Background()) {
+		var appointment models.Appoitment
+		if err := cursor.Decode(&appointment); err != nil {
+			log.Fatal(err)
+			return appointments, err
+		}
+		appointments = append(appointments, appointment)
+	}
+
+	// Check for any errors during cursor iteration
+	if err := cursor.Err(); err != nil {
+		log.Fatal(err)
+		return nil, err
+	}
 	if err != nil {
 		if err == mongo.ErrNoDocuments {
 			// Handle the case where no documents are found
-			return appointments, fmt.Errorf("No data found for the given ID: %s", patientID)
+			return appointments, fmt.Errorf("no data found for the given ID: %s", patientID)
 		}
 
 		// Handle other errors
 		return appointments, err
 	}
-   // fmt.Println(appointments)
+	fmt.Println(appointments)
 	return appointments, nil
 
 }
 
-
-func ViewFeedback() ([] models.Feedback,error){
+func ViewFeedback() ([]models.Feedback, error) {
 	filter := bson.D{}
 	cursor, err := config.Customer_feedback.Find(context.Background(), filter)
 	if err != nil {

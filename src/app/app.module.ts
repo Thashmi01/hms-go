@@ -13,6 +13,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RegisterCustomerComponent } from './register-customer/register-customer.component';
 import { RegisterAdminComponent } from './register-admin/register-admin.component';
+import { DashboardCustomerComponent } from './dashboard-customer/dashboard-customer.component';
+import { AppointmentComponent } from './appointment/appointment.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { RegisterAdminComponent } from './register-admin/register-admin.componen
     AdminLoginComponent,
     DashboardComponent,
     RegisterCustomerComponent,
-    RegisterAdminComponent
+    RegisterAdminComponent,
+    DashboardCustomerComponent,
+    AppointmentComponent
   ],
   imports: [
     BrowserModule,

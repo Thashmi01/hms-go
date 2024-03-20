@@ -180,7 +180,7 @@ func GetById(c *gin.Context) {
 
 	func ViewAppointment(c *gin.Context) {
 		// Get the adminId query parameter from the request
-		adminId := c.DefaultQuery("id", "")
+		adminId := c.DefaultQuery("patientid", "")
 		fmt.Println(adminId)
 	
 		// Check if adminId is empty or not provided
@@ -197,10 +197,7 @@ func GetById(c *gin.Context) {
 		}
 	//    fmt.Println(appointments)
 		// Return the fetched appointment data as JSON response
-		c.
-		
-		
-		JSON(http.StatusOK, gin.H{"message": appointments})
+		c.JSON(http.StatusOK, gin.H{"message": appointments})
 	}
 	
 
