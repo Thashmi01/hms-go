@@ -9,7 +9,6 @@ import (
 	"log"
 	"math/rand"
 	"time"
-
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
 )
@@ -225,7 +224,40 @@ func ViewAppointment(patientID string) ([]models.Appoitment, error) {
 	return appointments, nil
 
 }
+func ViewAllAppointments() ([]models.Appoitment, error) {
+	//fmt.Println("service")
+	// Define a filter to query appointments by patient ID.
+	filter := bson.M{}
 
+	var appointments []models.Appoitment
+	cursor, err := config.Customer_Collection.Find(context.Background(), filter)
+	for cursor.Next(context.Background()) {
+		var appointment models.Appoitment
+		if err := cursor.Decode(&appointment); err != nil {
+			log.Fatal(err)
+			return appointments, err
+		}
+		appointments = append(appointments, appointment)
+	}
+
+	// Check for any errors during cursor iteration
+	if err := cursor.Err(); err != nil {
+		log.Fatal(err)
+		return nil, err
+	}
+	if err != nil {
+		if err == mongo.ErrNoDocuments {
+			// Handle the case where no documents are found
+			return appointments, fmt.Errorf("no data found")
+		}
+
+		// Handle other errors
+		return appointments, err
+	}
+	fmt.Println(appointments)
+	return appointments, nil
+
+}
 func ViewFeedback() ([]models.Feedback, error) {
 	filter := bson.D{}
 	cursor, err := config.Customer_feedback.Find(context.Background(), filter)
@@ -246,4 +278,40 @@ func ViewFeedback() ([]models.Feedback, error) {
 	}
 	fmt.Println(customers)
 	return customers, nil
+}
+
+func PredictDisease() (int, error) {
+	appointment, err := ViewAllAppointments()
+	if err != nil {
+		return 0, err
+	}
+	fmt.Println("Predicting severity for the next 24 hours...")
+
+	// Get current date
+	currentDate := time.Now().Format("2006-01-02")
+
+	// Count occurrences of diseases for the current date in historical data
+	diseaseCounts := make(map[string]int)
+	for _, data := range appointment {
+		if data.Date == currentDate {
+			diseaseCounts[data.Purpose]++
+		}
+	}
+
+	// If no data is available for the current date, predict based on all historical data
+	if len(diseaseCounts) == 0 {
+		for _, data := range appointment {
+			diseaseCounts[data.Purpose]++
+		}
+	}
+
+	// Predicted severity is the total count of diseases for the current date
+	totalOccurrences := len(appointment)
+	fmt.Printf("Predicted severity for %s:\n", currentDate)
+	var severity int
+	for disease, count := range diseaseCounts {
+		severity = (count * 10) / totalOccurrences // Scale severity from 0 to 10 based on frequency
+		fmt.Printf("%s: %d\n", disease, severity)
+	}
+	return severity,nil
 }

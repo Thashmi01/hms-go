@@ -9,6 +9,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+
 func CreateProfile(c *gin.Context) {
 	fmt.Println("Creating Profile")
 	var profile models.Customer
@@ -21,7 +22,6 @@ func CreateProfile(c *gin.Context) {
 	fmt.Println("json binded")
 	fmt.Println(profile)
 
-	
 	err := service.Insert(profile)
 	fmt.Println(err)
 	if err != nil {
@@ -133,83 +133,101 @@ func GetAllCustomers(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{"message": customers})
 }
 
-
 func GetById(c *gin.Context) {
-		// Get the adminId query parameter from the request
-		adminId := c.DefaultQuery("id", "")
-		fmt.Println(adminId)
-	
-		// Check if adminId is empty or not provided
-		if adminId == "" {
-			c.JSON(http.StatusBadRequest, gin.H{"error": "Admin ID is required"})
-			return
-		}
-	
-		// Call your service method to fetch data by adminId
-		customer, err := service.GetById(adminId)
-		if err != nil {
-			c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
-			return
-		}
-	
-		// Return the fetched data as JSON response
-		c.JSON(http.StatusOK, gin.H{"message": customer})
+	// Get the adminId query parameter from the request
+	adminId := c.DefaultQuery("id", "")
+	fmt.Println(adminId)
+
+	// Check if adminId is empty or not provided
+	if adminId == "" {
+		c.JSON(http.StatusBadRequest, gin.H{"error": "Admin ID is required"})
+		return
 	}
 
-	func Deletebyid(c *gin.Context) {
-		adminId := c.DefaultQuery("id", "")
-		fmt.Println(adminId)
-	
-		// Check if adminId is empty or not provided
-		if adminId == "" {
-			c.JSON(http.StatusBadRequest, gin.H{"error": "Admin ID is required"})
-			return
-		}
-	
-		// Call your service method to delete data by adminId
-		err := service.DeleteById(adminId)
-		if err != nil {
-			c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
-			return
-		}
-	
-		// Return a success message
-		c.JSON(http.StatusOK, gin.H{"message": "Data deleted successfully"})
+	// Call your service method to fetch data by adminId
+	customer, err := service.GetById(adminId)
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
+		return
 	}
-	
 
-	func ViewAppointment(c *gin.Context) {
-		// Get the adminId query parameter from the request
-		adminId := c.DefaultQuery("patientid", "")
-		fmt.Println(adminId)
-	
-		// Check if adminId is empty or not provided
-		if adminId == "" {
-			c.JSON(http.StatusBadRequest, gin.H{"error": "Admin ID is required"})
-			return
-		}
-	
-		// Call your service method to fetch appointment data by adminId
-		appointments, err := service.ViewAppointment(adminId)
-		if err != nil {
-			c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
-			return
-		}
+	// Return the fetched data as JSON response
+	c.JSON(http.StatusOK, gin.H{"message": customer})
+}
+
+func Deletebyid(c *gin.Context) {
+	adminId := c.DefaultQuery("id", "")
+	fmt.Println(adminId)
+
+	// Check if adminId is empty or not provided
+	if adminId == "" {
+		c.JSON(http.StatusBadRequest, gin.H{"error": "Admin ID is required"})
+		return
+	}
+
+	// Call your service method to delete data by adminId
+	err := service.DeleteById(adminId)
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
+		return
+	}
+
+	// Return a success message
+	c.JSON(http.StatusOK, gin.H{"message": "Data deleted successfully"})
+}
+
+func ViewAppointment(c *gin.Context) {
+	// Get the adminId query parameter from the request
+	adminId := c.DefaultQuery("patientid", "")
+	fmt.Println(adminId)
+
+	// Check if adminId is empty or not provided
+	if adminId == "" {
+		c.JSON(http.StatusBadRequest, gin.H{"error": "Admin ID is required"})
+		return
+	}
+
+	// Call your service method to fetch appointment data by adminId
+	appointments, err := service.ViewAppointment(adminId)
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
+		return
+	}
 	//    fmt.Println(appointments)
-		// Return the fetched appointment data as JSON response
-		c.JSON(http.StatusOK, gin.H{"message": appointments})
+	// Return the fetched appointment data as JSON response
+	c.JSON(http.StatusOK, gin.H{"message": appointments})
+}
+func ViewAllAppointments(c *gin.Context) {
+
+
+	// Call your service method to fetch appointment data by adminId
+	appointments, err := service.ViewAllAppointments()
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
+		return
 	}
-	
+	//    fmt.Println(appointments)
+	// Return the fetched appointment data as JSON response
+	c.JSON(http.StatusOK, gin.H{"message": appointments})
+}
 
-	func ViewFeedback( c *gin.Context) {
-    
-		customers, err := service.ViewFeedback()
-		fmt.Println(customers)
-		if err != nil {
-			c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
-			return
-		}
-		c.JSON(http.StatusOK, gin.H{"message": customers})
+func ViewFeedback(c *gin.Context) {
+
+	customers, err := service.ViewFeedback()
+	fmt.Println(customers)
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
+		return
 	}
+	c.JSON(http.StatusOK, gin.H{"message": customers})
+}
 
+func PredictDisease(c *gin.Context){
+	severity,err:= service.PredictDisease()
+	if err!=nil{
+		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
+		return 
+	}
+	c.JSON(http.StatusOK, gin.H{"message": severity})
 
+}
