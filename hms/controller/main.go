@@ -223,11 +223,11 @@ func ViewFeedback(c *gin.Context) {
 }
 
 func PredictDisease(c *gin.Context){
-	severity,err:= service.PredictDisease()
+	predict,err:= service.PredictDisease()
 	if err!=nil{
 		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 		return 
 	}
-	c.JSON(http.StatusOK, gin.H{"message": severity})
+	c.JSON(http.StatusOK, gin.H{"message": predict})
 
 }

@@ -27,7 +27,7 @@ export class AppointmentViewComponent implements OnInit {
           this.appointments = appointmentsArray;
 
           // Log the appointments array
-          console.log(this.appointments);
+          // console.log(appointmentsArray);
         }
       },
       (error) => {

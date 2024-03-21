@@ -1,0 +1,41 @@
+<h2>Appointment View</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Time</th>
+      <th>Purpose</th>
+      <th>Department</th>
+      <!-- Add more columns as needed -->
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let appointment of appointments">
+      <td>{{ appointment.date }}</td>
+      <td>{{ appointment.time }}</td>
+      <td>{{ appointment.purpose }}</td>
+      <td>{{ appointment.dep }}</td>
+      <!-- Add more columns as needed -->
+    </tr>
+  </tbody>
+</table>
+
+<button (click)="loadPrediction()">Predict</button>
+
+<div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Disease</th>
+        <th>Severity</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let prediction of predictions">
+        <td>{{ prediction.diseasename }}</td>
+        <td>{{ prediction.severity }}</td>
+        <!-- Add more columns as needed -->
+      </tr>
+    </tbody>
+  </table>
+</div>

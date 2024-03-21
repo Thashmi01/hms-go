@@ -169,7 +169,6 @@ func GetById(id string) (models.Customer, error) {
 		// Handle other errors
 		return patient, err
 	}
-
 	return patient, nil
 }
 
@@ -220,7 +219,7 @@ func ViewAppointment(patientID string) ([]models.Appoitment, error) {
 		// Handle other errors
 		return appointments, err
 	}
-	fmt.Println(appointments)
+	// fmt.Println(appointments)
 	return appointments, nil
 
 }
@@ -254,7 +253,7 @@ func ViewAllAppointments() ([]models.Appoitment, error) {
 		// Handle other errors
 		return appointments, err
 	}
-	fmt.Println(appointments)
+	// fmt.Println(appointments)
 	return appointments, nil
 
 }
@@ -280,10 +279,10 @@ func ViewFeedback() ([]models.Feedback, error) {
 	return customers, nil
 }
 
-func PredictDisease() (int, error) {
+func PredictDisease() ([]models.Prediction, error) {
 	appointment, err := ViewAllAppointments()
 	if err != nil {
-		return 0, err
+		return nil, err
 	}
 	fmt.Println("Predicting severity for the next 24 hours...")
 
@@ -308,10 +307,15 @@ func PredictDisease() (int, error) {
 	// Predicted severity is the total count of diseases for the current date
 	totalOccurrences := len(appointment)
 	fmt.Printf("Predicted severity for %s:\n", currentDate)
-	var severity int
+	var predict []models.Prediction
 	for disease, count := range diseaseCounts {
-		severity = (count * 10) / totalOccurrences // Scale severity from 0 to 10 based on frequency
+		severity := (count * 10) / totalOccurrences // Scale severity from 0 to 10 based on frequency
 		fmt.Printf("%s: %d\n", disease, severity)
+		r := models.Prediction{
+			DiseaseName: disease,
+			Severity:    severity,
+		}
+		predict = append(predict, r)
 	}
-	return severity,nil
+	return predict,nil
 }

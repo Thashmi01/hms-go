@@ -47,3 +47,8 @@ type Createadmin struct {
 type Getbyid struct{
 	PatientID       string `json:"patientid,omitempty"`
 }
+
+type Prediction struct{
+	DiseaseName string `json:"diseasename",omitempty`
+	Severity int `json:"severity",omitempty`
+}

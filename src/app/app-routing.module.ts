@@ -25,6 +25,7 @@ import { DashboardCustomerComponent } from './dashboard-customer/dashboard-custo
 import { AppointmentComponent } from './appointment/appointment.component';
 import { CreateFeedbackComponent } from './create-feedback/create-feedback.component';
 import { DashboardAdminComponent } from './dashboard-admin/dashboard-admin.component';
+import { AppointmentAdminComponent } from './appointment-admin/appointment-admin.component';
 
 const routes: Routes = [
   { path: '', component: DashboardComponent },
@@ -37,6 +38,7 @@ const routes: Routes = [
   { path: 'feedbacks', component: FeedbackViewComponent },
   { path: 'login', component: LoginComponent },
   { path: 'appointment', component: AppointmentComponent},
+  { path: 'appointmentadmin', component: AppointmentAdminComponent},
   { path: 'admin-login', component: AdminLoginComponent },
   { path: 'customerpage', component: DashboardCustomerComponent },
   { path: 'adminpage', component: DashboardAdminComponent},
