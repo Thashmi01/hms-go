@@ -28,14 +28,17 @@ export class CustomerDetailsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.route.params.subscribe(params => {
-      this.customerId = params['id'];
-      this.fetchCustomerDetails();
-    });
+    // this.route.params.subscribe(params => {
+    //   this.customerId = params['PA7702'];
+    //   console.log("*********************",this.customerId)
+    //   this.fetchCustomerDetails();
+    // });
+    this.fetchCustomerDetails();
   }
 
   fetchCustomerDetails(): void {
-    this.apiService.getById(this.customerId).subscribe(
+   const customerId = 'PA7702'
+    this.apiService.getById(customerId).subscribe(
       (data: Customer) => {
         this.customer = data;
       },

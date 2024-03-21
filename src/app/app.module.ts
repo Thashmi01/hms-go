@@ -16,6 +16,8 @@ import { RegisterAdminComponent } from './register-admin/register-admin.componen
 import { DashboardCustomerComponent } from './dashboard-customer/dashboard-customer.component';
 import { AppointmentComponent } from './appointment/appointment.component';
 import { CreateFeedbackComponent } from './create-feedback/create-feedback.component';
+import { DashboardAdminComponent } from './dashboard-admin/dashboard-admin.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -31,13 +33,15 @@ import { CreateFeedbackComponent } from './create-feedback/create-feedback.compo
     RegisterAdminComponent,
     DashboardCustomerComponent,
     AppointmentComponent,
-    CreateFeedbackComponent
+    CreateFeedbackComponent,
+    DashboardAdminComponent,
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule
   ],
   providers: [
     provideClientHydration()

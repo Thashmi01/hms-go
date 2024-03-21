@@ -24,13 +24,14 @@ import { RegisterAdminComponent } from './register-admin/register-admin.componen
 import { DashboardCustomerComponent } from './dashboard-customer/dashboard-customer.component';
 import { AppointmentComponent } from './appointment/appointment.component';
 import { CreateFeedbackComponent } from './create-feedback/create-feedback.component';
+import { DashboardAdminComponent } from './dashboard-admin/dashboard-admin.component';
 
 const routes: Routes = [
   { path: '', component: DashboardComponent },
   { path: 'register', component: RegisterCustomerComponent},
   { path: 'registeradmin', component: RegisterAdminComponent},
   { path: 'customers', component: CustomerListComponent },
-  { path: 'customers/:id', component: CustomerDetailsComponent },
+  //{ path: 'customers/:id', component: CustomerDetailsComponent },
   { path: 'appointments', component: AppointmentViewComponent },
   { path: 'feedback', component: CreateFeedbackComponent },
   { path: 'feedbacks', component: FeedbackViewComponent },
@@ -38,7 +39,10 @@ const routes: Routes = [
   { path: 'appointment', component: AppointmentComponent},
   { path: 'admin-login', component: AdminLoginComponent },
   { path: 'customerpage', component: DashboardCustomerComponent },
-  { path: '**', redirectTo: '' } // Redirect to login for any other route
+  { path: 'adminpage', component: DashboardAdminComponent},
+  { path: 'getbyid', component: CustomerDetailsComponent},
+  { path: '**', redirectTo: '' }, // Redirect to login for any other route
+  
 ];
 
 @NgModule({

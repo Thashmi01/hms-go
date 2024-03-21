@@ -1,0 +1,56 @@
+/* Style for the container */
+.container {
+    width: 50%; /* Adjust width as needed */
+    margin: auto; /* Center the container horizontally */
+    padding: 20px; /* Add padding inside the container */
+  }
+  
+  /* Style for the heading */
+  h2 {
+    text-align: center; /* Center align the text */
+    color: #333; /* Text color */
+    margin-bottom: 20px; /* Add some space below the heading */
+  }
+  
+  /* Style for form groups */
+  .form-group {
+    margin-bottom: 20px; /* Add space between form groups */
+  }
+  
+  /* Style for labels */
+  label {
+    color: #555; /* Label text color */
+  }
+  
+  /* Style for input fields and textareas */
+  .form-control {
+    width: 100%; /* Make input fields and textareas full width */
+    padding: 10px; /* Add padding inside input fields and textareas */
+    font-size: 16px; /* Font size */
+    border: 1px solid #ccc; /* Border */
+    border-radius: 4px; /* Border radius */
+  }
+  
+  /* Style for submit button */
+  .btn-primary {
+    display: block; /* Make the button full width */
+    width: 100%; /* Make the button full width */
+    padding: 10px; /* Add padding inside the button */
+    font-size: 16px; /* Font size */
+    color: #fff; /* Text color */
+    background-color: #007bff; /* Button background color */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Border radius */
+    cursor: pointer; /* Cursor style */
+  }
+  
+  /* Style for error message */
+  .alert {
+    padding: 10px; /* Add padding */
+    margin-top: 20px; /* Add space at the top */
+    border-radius: 4px; /* Border radius */
+    color: #721c24; /* Text color */
+    background-color: #f8d7da; /* Background color */
+    border: 1px solid #f5c6cb; /* Border */
+  }
+  
