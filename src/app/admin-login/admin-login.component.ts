@@ -42,8 +42,8 @@ export class AdminLoginComponent implements OnInit {
       return;
     }
   
-    const adminID = this.loginForm.controls['adminID'].value;
-    const password = this.loginForm.controls['password'].value;
+    const adminID = this.loginForm.get('adminID')?.value;
+    const password = this.loginForm.get('password')?.value;
   
     const adminLogin: AdminLogin = {
       adminID,
@@ -52,7 +52,7 @@ export class AdminLoginComponent implements OnInit {
   
     this.apiService.adminLogin(adminLogin).subscribe(
       () => {
-        this.router.navigate(['/dashboard']); // Redirect to dashboard on successful login
+        this.router.navigate(['adminpage']); // Redirect to dashboard on successful login
       },
       (error) => {
         this.error = error.message || 'An error occurred. Please try again.'; // Display error message
