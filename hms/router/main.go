@@ -17,6 +17,7 @@ func Router() *gin.Engine {
 	router.GET("/getalldata", controller.GetAllCustomers)
 	router.GET("/getbyid",controller.GetById)
 	router.GET("/viewappointment",controller.ViewAppointment)
+	router.GET("/viewallappointments",controller.ViewAllAppointments)
 	router.GET("/viewallfeedback",controller.ViewFeedback)
 	router.POST("/create", controller.CreateProfile)
 	router.POST("/appointment", controller.Appointment)
@@ -25,7 +26,7 @@ func Router() *gin.Engine {
 	router.POST("/createadmin", controller.Createadmin)
 	router.POST("/adminlogin", controller.Adminlogin)
 	router.DELETE("/deletebyid",controller.Deletebyid)
-
+	
 
 	return router
 }

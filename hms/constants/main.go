@@ -1,6 +1,6 @@
 package constants
 
-const ConnectionString = "mongodb://localhost:27017/?retryWrites=true&serverSelectionTimeoutMS=5000&connectTimeoutMS=10000"
+const ConnectionString = "mongodb+srv://sonas:root123@cluster0.s6acseo.mongodb.net/admin?retryWrites=true&replicaSet=atlas-ohlsdf-shard-0&readPreference=primary&srvServiceName=mongodb&connectTimeoutMS=10000&authSource=admin&authMechanism=SCRAM-SHA-1"
 const DB_Name = "HospitalMS"
 const Customer_collection = "patient"
 const Customer_appoitment = "appointment"
