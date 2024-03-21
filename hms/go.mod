@@ -7,7 +7,10 @@ require (
 	go.mongodb.org/mongo-driver v1.14.0
 )
 
-require github.com/chenzhuoyu/iasm v0.9.1 // indirect
+require (
+	github.com/chenzhuoyu/iasm v0.9.1 // indirect
+	github.com/kr/text v0.2.0 // indirect
+)
 
 require (
 	github.com/bytedance/sonic v1.11.2 // indirect

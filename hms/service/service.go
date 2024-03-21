@@ -9,7 +9,6 @@ import (
 	"log"
 	"math/rand"
 	"time"
-
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
 )
@@ -279,4 +278,40 @@ func ViewFeedback() ([]models.Feedback, error) {
 	}
 	fmt.Println(customers)
 	return customers, nil
+}
+
+func PredictDisease() (int, error) {
+	appointment, err := ViewAllAppointments()
+	if err != nil {
+		return 0, err
+	}
+	fmt.Println("Predicting severity for the next 24 hours...")
+
+	// Get current date
+	currentDate := time.Now().Format("2006-01-02")
+
+	// Count occurrences of diseases for the current date in historical data
+	diseaseCounts := make(map[string]int)
+	for _, data := range appointment {
+		if data.Date == currentDate {
+			diseaseCounts[data.Purpose]++
+		}
+	}
+
+	// If no data is available for the current date, predict based on all historical data
+	if len(diseaseCounts) == 0 {
+		for _, data := range appointment {
+			diseaseCounts[data.Purpose]++
+		}
+	}
+
+	// Predicted severity is the total count of diseases for the current date
+	totalOccurrences := len(appointment)
+	fmt.Printf("Predicted severity for %s:\n", currentDate)
+	var severity int
+	for disease, count := range diseaseCounts {
+		severity = (count * 10) / totalOccurrences // Scale severity from 0 to 10 based on frequency
+		fmt.Printf("%s: %d\n", disease, severity)
+	}
+	return severity,nil
 }
