@@ -23,6 +23,7 @@ import { RegisterCustomerComponent } from './register-customer/register-customer
 import { RegisterAdminComponent } from './register-admin/register-admin.component';
 import { DashboardCustomerComponent } from './dashboard-customer/dashboard-customer.component';
 import { AppointmentComponent } from './appointment/appointment.component';
+import { CreateFeedbackComponent } from './create-feedback/create-feedback.component';
 
 const routes: Routes = [
   { path: '', component: DashboardComponent },
@@ -31,6 +32,7 @@ const routes: Routes = [
   { path: 'customers', component: CustomerListComponent },
   { path: 'customers/:id', component: CustomerDetailsComponent },
   { path: 'appointments', component: AppointmentViewComponent },
+  { path: 'feedback', component: CreateFeedbackComponent },
   { path: 'feedbacks', component: FeedbackViewComponent },
   { path: 'login', component: LoginComponent },
   { path: 'appointment', component: AppointmentComponent},

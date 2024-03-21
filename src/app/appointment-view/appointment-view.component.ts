@@ -20,13 +20,15 @@ export class AppointmentViewComponent implements OnInit {
     this.apiService.getAppointment(patientId).subscribe(
       (data: any) => { // Use 'any' type to handle object data
         // Convert object data to array
-        const appointmentsArray: Appointment[] = Object.values(data.message);
-  
-        // Assign the array to 'this.appointments'
-        this.appointments = appointmentsArray;
-  
-        // Log the appointments array
-        console.log(this.appointments);
+        if (data != null) {
+          const appointmentsArray: Appointment[] = Object.values(data.message);
+
+          // Assign the array to 'this.appointments'
+          this.appointments = appointmentsArray;
+
+          // Log the appointments array
+          console.log(this.appointments);
+        }
       },
       (error) => {
         console.error('Error loading appointments:', error);

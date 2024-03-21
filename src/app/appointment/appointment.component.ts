@@ -1,15 +1,3 @@
-// import { Component } from '@angular/core';
-
-// @Component({
-//   selector: 'app-appointment',
-//   templateUrl: './appointment.component.html',
-//   styleUrl: './appointment.component.css'
-// })
-// export class AppointmentComponent {
-
-// }
-
-
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ApiService, Appointment } from '../api.service';
