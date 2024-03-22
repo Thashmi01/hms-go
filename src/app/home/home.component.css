@@ -1,8 +1,8 @@
 body {
     font-family: Arial, sans-serif;
-/* height: 100%;  */
-   padding: 0;
-   /* background-color: antiquewhite; */
+    /* height: 100%;  */
+    padding: 0;
+    /* background-color: antiquewhite; */
 }
 
 header {
@@ -35,7 +35,8 @@ main {
     margin-left: 10%;
     padding: 20px;
 }
-.home{
+
+.home {
     height: 750px;
     /* background-color: antiquewhite; */
 }
@@ -44,19 +45,23 @@ main {
 .slideshow-container {
     max-width: 100%;
     position: relative;
-    margin: 20px auto; /* Center the container horizontally */
-    text-align: center; 
-  }
-  
-.gap{
+    margin: 20px auto;
+    /* Center the container horizontally */
+    text-align: center;
+}
+
+.gap {
     margin: 50px;
 }
-.image{
+
+.image {
     max-width: 100%;
     position: relative;
-    margin: 20px auto; /* Center the container horizontally */
+    margin: 20px auto;
+    /* Center the container horizontally */
     float: right;
 }
+
 .container {
     margin-top: 50px;
 }
@@ -83,6 +88,51 @@ main {
     line-height: 1.5;
     color: #666;
 }
+
+/* Navigation styling */
+nav {
+    background-color: #333;
+    /* Background color */
+    padding: 10px 0;
+    /* Padding for the top and bottom */
+    display: flex;
+    /* Use flexbox for layout */
+    justify-content: space-between;
+    /* Align items with space between */
+}
+
+ul {
+    list-style-type: none;
+    /* Remove default bullet points */
+    margin: 0;
+    /* Remove default margin */
+    padding: 0;
+    /* Remove default padding */
+    display: flex;
+    /* Use flexbox for layout */
+}
+
+li {
+    margin-right: 20px;
+    /* Add some spacing between menu items */
+}
+
+a {
+    color: #fff;
+    /* Text color */
+    text-decoration: none;
+    /* Remove default underline */
+    padding: 10px;
+    /* Add padding around text */
+}
+
+a:hover {
+    background-color: #555;
+    /* Background color on hover */
+    border-radius: 5px;
+    /* Rounded corners on hover */
+}
+
 
 .row {
     display: flex;
@@ -166,12 +216,14 @@ main {
     /* padding: 0 15px; */
     /* margin-bottom: 10px; */
 }
-.col-md-3 p{
+
+.col-md-3 p {
     flex: 0 0 25%;
     color: #fafafa;
     /* padding: 0 15px; */
     /* margin-bottom: 10px; */
 }
+
 .pricing-v9 {
     border: 1px solid #e5e5e5;
     border-radius: 10px;
@@ -217,6 +269,7 @@ main {
 .g-color-default {
     color: #333;
 }
+
 .container {
     margin-bottom: 50px;
 }
@@ -268,6 +321,7 @@ main {
     margin: 20px 15px 10px;
     color: #0e0e0e;
 }
+
 .news-v1-in ul a {
     font-size: 15px;
     font-weight: bold;
@@ -310,6 +364,7 @@ main {
     background-color: #333;
     color: #fff;
 }
+
 .footer-v1 {
     background-color: #333;
     color: #fff;
@@ -433,7 +488,8 @@ main {
 }
 
 .container.content-md.welcomeSection {
-    padding: 50px 0; /* Adjust the padding as needed */
+    padding: 50px 0;
+    /* Adjust the padding as needed */
 }
 
 .section1 {
@@ -443,25 +499,31 @@ main {
 
 .col-md-6 {
     margin-bottom: 40px;
-    padding: 20px; /* Add padding for inner content */
+    padding: 20px;
+    /* Add padding for inner content */
 }
 
 .image img {
     margin-left: 30px;
-    width: 100%; /* Ensure the image fills its container */
-    max-width: 100%; /* Ensure the image doesn't exceed its container's width */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%;
+    /* Ensure the image fills its container */
+    max-width: 100%;
+    /* Ensure the image doesn't exceed its container's width */
+    height: auto;
+    /* Maintain aspect ratio */
 }
 
 .title-v2 {
     font-size: 24px;
     margin-bottom: 20px;
-    color: rgb(59, 59, 59); /* Adjust the color as needed */
+    color: rgb(59, 59, 59);
+    /* Adjust the color as needed */
 }
 
 p {
     text-align: justify;
     font-size: 20px;
-    color: rgb(39, 39, 39); /* Adjust the color as needed */
+    color: rgb(39, 39, 39);
+    /* Adjust the color as needed */
     margin-bottom: 10px;
 }
