@@ -20,6 +20,7 @@ import { AppointmentAdminComponent } from './appointment-admin/appointment-admin
 import { DashboardAdminComponent } from './dashboard-admin/dashboard-admin.component';
 import { RouterModule } from '@angular/router';
 import { DeleteCustomerDetailsComponent } from './delete-customer-details/delete-customer-details.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { DeleteCustomerDetailsComponent } from './delete-customer-details/delete
     CreateFeedbackComponent,
     AppointmentAdminComponent,
     DashboardAdminComponent,
-    DeleteCustomerDetailsComponent
+    DeleteCustomerDetailsComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
