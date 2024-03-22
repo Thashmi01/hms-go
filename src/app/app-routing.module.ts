@@ -26,6 +26,9 @@ import { AppointmentComponent } from './appointment/appointment.component';
 import { CreateFeedbackComponent } from './create-feedback/create-feedback.component';
 import { DashboardAdminComponent } from './dashboard-admin/dashboard-admin.component';
 import { AppointmentAdminComponent } from './appointment-admin/appointment-admin.component';
+import { DeleteCustomerDetailsComponent } from './delete-customer-details/delete-customer-details.component';
+
+
 
 const routes: Routes = [
   { path: '', component: DashboardComponent },
@@ -43,6 +46,7 @@ const routes: Routes = [
   { path: 'customerpage', component: DashboardCustomerComponent },
   { path: 'adminpage', component: DashboardAdminComponent},
   { path: 'getbyid', component: CustomerDetailsComponent},
+  { path: 'deletebyid', component: DeleteCustomerDetailsComponent},
   { path: '**', redirectTo: '' }, // Redirect to login for any other route
   
 ];
