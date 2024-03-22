@@ -16,6 +16,7 @@ import { RegisterAdminComponent } from './register-admin/register-admin.componen
 import { DashboardCustomerComponent } from './dashboard-customer/dashboard-customer.component';
 import { AppointmentComponent } from './appointment/appointment.component';
 import { CreateFeedbackComponent } from './create-feedback/create-feedback.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { CreateFeedbackComponent } from './create-feedback/create-feedback.compo
     RegisterAdminComponent,
     DashboardCustomerComponent,
     AppointmentComponent,
-    CreateFeedbackComponent
+    CreateFeedbackComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
