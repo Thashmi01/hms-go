@@ -1,0 +1,51 @@
+/* Container Styles */
+.container {
+    max-width: 600px; /* Maximum width for the container */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px; /* Padding for the container */
+  }
+  
+  /* Heading Styles */
+  h2 {
+    font-size: 24px; /* Font size for the heading */
+    margin-bottom: 20px; /* Bottom margin for the heading */
+    color: #333; /* Text color for the heading */
+  }
+  
+  /* Form Styles */
+  .form-label {
+    font-weight: bold; /* Bold font weight for labels */
+  }
+  
+  .form-control {
+    width: 100%; /* Full width for form controls */
+    padding: 10px; /* Padding for form controls */
+    margin-bottom: 15px; /* Bottom margin for form controls */
+    border: 1px solid #ccc; /* Border for form controls */
+    border-radius: 5px; /* Rounded corners for form controls */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+  }
+  
+  .btn-primary {
+    background-color:  #424344; /* Primary button background color */
+    color: #fff; /* Button text color */
+    border: none; /* No border */
+    padding: 10px 20px; /* Padding for button */
+    font-size: 16px; /* Font size for button text */
+    border-radius: 5px; /* Rounded corners for button */
+    cursor: pointer; /* Cursor style */
+  }
+  
+  .btn-primary:hover {
+    background-color:  #cad1d8; /* Darker background color on hover */
+  }
+  
+  .alert-danger {
+    color: #721c24; /* Text color for danger alerts */
+    background-color: #f8d7da; /* Background color for danger alerts */
+    border-color: #f5c6cb; /* Border color for danger alerts */
+    padding: 10px; /* Padding for danger alerts */
+    border-radius: 5px; /* Rounded corners for danger alerts */
+    margin-top: 15px; /* Top margin for danger alerts */
+  }
+  
