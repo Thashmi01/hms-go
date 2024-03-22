@@ -1,0 +1,28 @@
+/* Customer Details Styles */
+h1 {
+    font-size: 28px; /* Larger font size for emphasis */
+    margin-bottom: 30px; /* Increased margin for separation */
+    color: #333; /* Darker heading text color for better readability */
+  }
+  
+  .customer-details-container {
+    border: 2px solid #ccc; /* Thicker border for better visual separation */
+    border-radius: 8px; /* Slightly rounded corners for a modern look */
+    background-color: #f9f9f9; /* Lighter container background for contrast */
+    padding: 30px; /* Increased padding for better spacing */
+  }
+  
+  .customer-details p {
+    margin: 15px 0; /* Increased vertical margin for better readability */
+    color: #555; /* Slightly lighter text color for softer contrast */
+  }
+  
+  .customer-details strong {
+    font-weight: bold; /* No change, retains boldness for emphasis */
+  }
+  
+  .customer-not-found {
+    color: #d63031; /* Warmer error text color for attention */
+    font-weight: bold; /* Retains boldness for emphasis */
+  }
+  

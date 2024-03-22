@@ -22,7 +22,7 @@ export class CustomerDetailsComponent implements OnInit {
   }
 
   fetchCustomerDetails(): void {
-   const customerId = 'PA7702'
+   const customerId = 'PA7071'
     this.apiService.getById(customerId).subscribe(
       (data: any) => {
         this.customer = data.message; 

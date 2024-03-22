@@ -1,0 +1,40 @@
+/* Navigation Styles */
+nav {
+    background-color: #1a212b; /* Navigation background color */
+    padding: 15px 0;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  nav ul li:last-child {
+    margin-right: 0;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #fff; /* Link text color */
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    background-color: #01090e; /* Hover background color */
+  }
+  
+  /* Optional: Adjust router link active styles */
+  nav ul li a.router-link-active {
+    background-color: #020a11; /* Active background color */
+  }
+  

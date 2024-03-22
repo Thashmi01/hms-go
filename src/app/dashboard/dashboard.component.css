@@ -1,29 +1,29 @@
 /* Navigation styling */
 nav {
-    background-color: #333; /* Background color */
-    padding: 10px 0; /* Padding for the top and bottom */
-  }
-  
-  ul {
-    list-style-type: none; /* Remove default bullet points */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    text-align: center; /* Center-align the menu */
-  }
-  
-  li {
-    display: inline-block; /* Display list items horizontally */
-    margin-right: 20px; /* Add some spacing between menu items */
-  }
-  
-  a {
-    color: #fff; /* Text color */
-    text-decoration: none; /* Remove default underline */
-    padding: 10px; /* Add padding around text */
-  }
-  
-  a:hover {
-    background-color: #555; /* Background color on hover */
-    border-radius: 5px; /* Rounded corners on hover */
-  }
-  
+  background-color: #333; /* Background color */
+  padding: 10px 0; /* Padding for the top and bottom */
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Align items with space between */
+}
+
+ul {
+  list-style-type: none; /* Remove default bullet points */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  display: flex; /* Use flexbox for layout */
+}
+
+li {
+  margin-right: 20px; /* Add some spacing between menu items */
+}
+
+a {
+  color: #fff; /* Text color */
+  text-decoration: none; /* Remove default underline */
+  padding: 10px; /* Add padding around text */
+}
+
+a:hover {
+  background-color: #555; /* Background color on hover */
+  border-radius: 5px; /* Rounded corners on hover */
+}
