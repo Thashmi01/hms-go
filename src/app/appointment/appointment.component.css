@@ -1,0 +1,132 @@
+
+
+/* Style for the navigation container */
+nav {
+  background-color: #333; /* Background color for the navigation */
+  padding: 10px; /* Padding around the navigation */
+}
+
+/* Style for the list items */
+nav ul {
+  list-style-type: none; /* Remove bullet points from the list */
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block; /* Display list items inline */
+  margin-right: 20px; /* Add spacing between list items */
+}
+
+/* Style for the anchor tags */
+nav ul li a {
+  color: #fff; /* Text color for the links */
+  text-decoration: none; /* Remove underline from links */
+  padding: 10px; /* Add padding inside links */
+}
+
+/* Style for the anchor tags on hover */
+nav ul li a:hover {
+  background-color: #555; /* Background color on hover */
+  border-radius: 4px; /* Add border radius on hover */
+}
+
+.container {
+  display: flex;
+  justify-content: left; /* Align items to the left */
+}
+
+.content {
+  flex: 1; /* Take up remaining space */
+  padding: 85px;
+}
+
+.form-container {
+  width: 80%; /* Adjust the width as needed */
+  margin: 0 auto; /* Center the form horizontally */
+}
+
+.form-container form {
+  margin-left: 0; /* Reset any default margin */
+}
+
+/* Style for form container */
+form {
+    width: 300px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  /* Style for labels */
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+  }
+  
+  /* Style for input fields */
+  input[type="text"],
+  input[type="date"],
+  input[type="time"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Style for submit button */
+  button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #0c232e;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  /* Style for error message */
+  .alert {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 4px;
+    margin-top: 10px;
+  }
+  
+  .alert-danger {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+  }
+  .specialty-heading {
+    text-align: center; /* Center the heading */
+    color: blue; /* Change the color to blue */
+  }
+  
+  .specialty-doctors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distribute items evenly */
+  }
+  
+  .doctor {
+    width: calc(30% - 10px); /* Adjust width as needed */
+    margin-bottom: 20px; /* Add space between boxes */
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .doctor {
+      width: calc(45% - 20px); /* Adjust width for smaller screens */
+    }
+  }
+  

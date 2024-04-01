@@ -9,14 +9,22 @@ import { AppointmentViewComponent } from './appointment-view/appointment-view.co
 import { FeedbackViewComponent } from './feedback-view/feedback-view.component';
 import { LoginComponent } from './login/login.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RegisterCustomerComponent } from './register-customer/register-customer.component';
 import { RegisterAdminComponent } from './register-admin/register-admin.component';
 import { DashboardCustomerComponent } from './dashboard-customer/dashboard-customer.component';
 import { AppointmentComponent } from './appointment/appointment.component';
 import { CreateFeedbackComponent } from './create-feedback/create-feedback.component';
+import { AppointmentAdminComponent } from './appointment-admin/appointment-admin.component';
+import { DashboardAdminComponent } from './dashboard-admin/dashboard-admin.component';
+import { RouterModule } from '@angular/router';
+import { DeleteCustomerDetailsComponent } from './delete-customer-details/delete-customer-details.component';
 import { HomeComponent } from './home/home.component';
+import { ContentComponent } from './content/content.component';
+import { AdminContentComponent } from './admin-content/admin-content.component';
+import { AdminContentAdministrationComponent } from './admin-content-administration/admin-content-administration.component';
+
 
 @NgModule({
   declarations: [
@@ -33,13 +41,21 @@ import { HomeComponent } from './home/home.component';
     DashboardCustomerComponent,
     AppointmentComponent,
     CreateFeedbackComponent,
-    HomeComponent
+    AppointmentAdminComponent,
+    DashboardAdminComponent,
+    DeleteCustomerDetailsComponent,
+    HomeComponent,
+    ContentComponent,
+    AdminContentComponent,
+    AdminContentAdministrationComponent
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule,
+    FormsModule
   ],
   providers: [
     provideClientHydration()

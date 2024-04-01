@@ -1,0 +1,96 @@
+.background-image {
+  background-image: url('https://blog.blueoceanbrain.com/hubfs/Stock%20Photos%20%2876%29.png'); /* Specify the path to your background image */
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh; /* Ensures the container takes up the full height of the viewport */
+   
+}
+/* Style for the navigation container */
+nav {
+  background-color: #333; /* Background color for the navigation */
+  padding: 10px; /* Padding around the navigation */
+}
+
+/* Style for the list items */
+nav ul {
+  list-style-type: none; /* Remove bullet points from the list */
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block; /* Display list items inline */
+  margin-right: 20px; /* Add spacing between list items */
+}
+
+/* Style for the anchor tags */
+nav ul li a {
+  color: #fff; /* Text color for the links */
+  text-decoration: none; /* Remove underline from links */
+  padding: 10px; /* Add padding inside links */
+}
+
+/* Style for the anchor tags on hover */
+nav ul li a:hover {
+  background-color: #555; /* Background color on hover */
+  border-radius: 4px; /* Add border radius on hover */
+}
+
+
+/* Style for the container */
+.container {
+    width: 50%; /* Adjust width as needed */
+    margin: auto; /* Center the container horizontally */
+    padding: 40px; /* Add padding inside the container */
+  }
+  
+  /* Style for the heading */
+  h2 {
+    text-align: center; /* Center align the text */
+    color: #323c48; /* Text color */
+    margin-bottom: 20px; /* Add some space below the heading */
+  }
+  
+  /* Style for form groups */
+  .form-group {
+    margin-bottom: 20px; /* Add space between form groups */
+  }
+  
+  /* Style for labels */
+  label {
+    color: #454b57; /* Label text color */
+    
+  }
+  
+  /* Style for input fields and textareas */
+  .form-control {
+    width: 100%; /* Make input fields and textareas full width */
+    padding: 10px; /* Add padding inside input fields and textareas */
+    font-size: 16px; /* Font size */
+    border: 1px solid #ccc; /* Border */
+    border-radius: 4px; /* Border radius */
+  }
+  
+  /* Style for submit button */
+  .btn-primary {
+    display: block; /* Make the button full width */
+    width: 102%; /* Make the button full width */
+    padding: 10px; /* Add padding inside the button */
+    font-size: 16px; /* Font size */
+    color: #fff; /* Text color */
+    background-color: #4e5d66; /* Button background color */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Border radius */
+    cursor: pointer; /* Cursor style */
+  }
+  
+  /* Style for error message */
+  .alert {
+    padding: 10px; /* Add padding */
+    margin-top: 20px; /* Add space at the top */
+    border-radius: 4px; /* Border radius */
+    color: #721c24; /* Text color */
+    background-color: #f8d7da; /* Background color */
+    border: 1px solid #f5c6cb; /* Border */
+  }
+  

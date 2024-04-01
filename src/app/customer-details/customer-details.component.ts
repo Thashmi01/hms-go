@@ -1,13 +1,3 @@
-// import { Component } from '@angular/core';
-
-// @Component({
-//   selector: 'app-customer-details',
-//   templateUrl: './customer-details.component.html',
-//   styleUrl: './customer-details.component.css'
-// })
-// export class CustomerDetailsComponent {
-
-// }
 
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
@@ -20,7 +10,7 @@ import { ApiService, Customer } from '../api.service';
 })
 export class CustomerDetailsComponent implements OnInit {
   customerId: string = '';
-  customer!: Customer;
+  customer!: any;
 
   constructor(
     private route: ActivatedRoute,
@@ -28,16 +18,15 @@ export class CustomerDetailsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.route.params.subscribe(params => {
-      this.customerId = params['id'];
-      this.fetchCustomerDetails();
-    });
+    this.fetchCustomerDetails();
   }
 
   fetchCustomerDetails(): void {
-    this.apiService.getById(this.customerId).subscribe(
-      (data: Customer) => {
-        this.customer = data;
+   const customerId = 'PA7071'
+    this.apiService.getById(customerId).subscribe(
+      (data: any) => {
+        this.customer = data.message; 
+        console.log(this.customer)
       },
       (error) => {
         console.error('Error fetching customer details:', error);

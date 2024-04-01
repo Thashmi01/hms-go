@@ -9,6 +9,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+
 func CreateProfile(c *gin.Context) {
 	fmt.Println("Creating Profile")
 	var profile models.Customer
@@ -219,4 +220,14 @@ func ViewFeedback(c *gin.Context) {
 		return
 	}
 	c.JSON(http.StatusOK, gin.H{"message": customers})
+}
+
+func PredictDisease(c *gin.Context){
+	predict,err:= service.PredictDisease()
+	if err!=nil{
+		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
+		return 
+	}
+	c.JSON(http.StatusOK, gin.H{"message": predict})
+
 }

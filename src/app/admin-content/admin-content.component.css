@@ -1,0 +1,35 @@
+.background-image {
+    background-image: url('https://www.dinamicor.com/wp-content/uploads/2021/07/Blog_8-4-21.jpg'); /* Specify the path to your background image */
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh; /* Ensures the container takes up the full height of the viewport */
+     
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .box {
+    width: calc(20% - 20px); /* Adjust width to fit your design */
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+  }
+  
+  .box h2 {
+    margin-top: 0;
+    color: #333;
+  }
+  
+  .box p {
+    margin-bottom: 0; /* Remove default margin */
+    color: #666;
+    text-align: justify; /* Justify alignment for the paragraph */
+  }
+  

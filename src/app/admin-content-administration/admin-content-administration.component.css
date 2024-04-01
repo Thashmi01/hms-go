@@ -1,0 +1,33 @@
+.administration-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .administration-section {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+  }
+  
+  .administration-section h2 {
+    margin-top: 0;
+    color: #333;
+  }
+  
+  .administration-section p {
+    margin-bottom: 10px;
+    color: #666;
+  }
+  
+  .administration-section ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .administration-section li {
+    margin-bottom: 5px;
+  }
+  

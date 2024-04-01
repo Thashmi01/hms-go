@@ -26,6 +26,7 @@ func Router() *gin.Engine {
 	router.POST("/createadmin", controller.Createadmin)
 	router.POST("/adminlogin", controller.Adminlogin)
 	router.DELETE("/deletebyid",controller.Deletebyid)
+	router.GET("/predict", controller.PredictDisease)
 	
 
 	return router

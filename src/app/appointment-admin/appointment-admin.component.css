@@ -1,0 +1,51 @@
+/* Appointment View Styles */
+h2 {
+    font-size: 28px; /* Larger font size for emphasis */
+    margin-bottom: 20px; /* Increased margin for separation */
+    color: #333; /* Darker heading text color for better readability */
+  }
+  
+  .table {
+    width: 100%; /* Full width for the table */
+    border-collapse: collapse; /* Collapse border spacing */
+    margin-bottom: 20px; /* Bottom margin for separation */
+  }
+  
+  .table th,
+  .table td {
+    border: 1px solid #ccc; /* Border for table cells */
+    padding: 10px; /* Padding for table cells */
+  }
+  
+  .table th {
+    background-color: #f2f2f2; /* Background color for table headers */
+    font-weight: bold; /* Bold font weight for table headers */
+    text-align: left; /* Align text to the left in headers */
+  }
+  
+  .table tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Alternate row background color */
+  }
+  
+  .button {
+    background-color: #4CAF50; /* Green background color */
+    border: none; /* No border */
+    color: #fff; /* Text color */
+    padding: 15px 32px; /* Padding */
+    text-align: center; /* Center text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Display as inline block */
+    font-size: 16px; /* Font size */
+    font-weight: bold; /* Bold font weight */
+    margin-bottom: 20px; /* Add bottom margin */
+    transition-duration: 0.4s; /* Transition duration */
+    cursor: pointer; /* Cursor style */
+    border-radius: 50px; /* Round button */
+    border: 2px solid #4CAF50; /* Border color */
+  }
+  
+  .button:hover {
+    background-color: #45a049; /* Darker green background color on hover */
+    border: 2px solid #45a049; /* Darker border color on hover */
+  }
+  

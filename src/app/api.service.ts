@@ -12,6 +12,11 @@ export interface Customer {
   patientID?: string;
 }
 
+export interface Prediction{
+  diseasename?: string;
+  severity?: number;
+}
+
 export interface Appointment {
   name?: string;
   phoneNumber?: string;
@@ -101,4 +106,13 @@ export class ApiService {
   viewFeedback(): Observable<Feedback[]> {
     return this.http.get<Feedback[]>(`${this.baseUrl}/viewallfeedback`);
   }
+
+  getAppointments(): Observable<any> {
+    return this.http.get<any>(`${this.baseUrl}/viewallappointments`); 
+  }
+
+  getPrediction(): Observable<any> {
+    return this.http.get<any>(`${this.baseUrl}/predict`); 
+  }
+
 }
