@@ -10,8 +10,8 @@ import { Router } from '@angular/router';
 })
 
 export class DeleteCustomerDetailsComponent {
- 
-  error: string = ''; // Initialize error property
+  customerId: string = '';
+  customer!: any;
  
 
   constructor(
@@ -20,22 +20,24 @@ export class DeleteCustomerDetailsComponent {
     ) { } // Inject your service here
 
   ngOnInit(): void {
-    this.deleteAdmin();
   }
 
-  deleteAdmin() {
-    const adminId = 'PA6884'
-    this.apiService.deleteById(adminId).subscribe(
+  onSubmit(): void {
+    if (this.customerId.trim() !== '') {
+      this.fetchCustomerDetails(this.customerId);
+    }
+  }
+
+  fetchCustomerDetails(customerId: string): void {
+    this.apiService.deleteById(customerId).subscribe(
       () => {
         // Success
         console.log('Admin deleted successfully');
-        this.router.navigate(['customerpage']);
+        this.customer = customerId;
 
       },
-      error => {
-        // Error handling
-        console.error('Error deleting admin:', error);
-        this.error = error.error.message || 'An error occurred while deleting admin';
+      (error) => {
+        console.error('Error fetching customer details:', error);
       }
     );
   }

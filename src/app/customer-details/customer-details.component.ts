@@ -1,6 +1,4 @@
-
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { ApiService, Customer } from '../api.service';
 
 @Component({
@@ -12,21 +10,23 @@ export class CustomerDetailsComponent implements OnInit {
   customerId: string = '';
   customer!: any;
 
-  constructor(
-    private route: ActivatedRoute,
-    private apiService: ApiService
-  ) { }
+  constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
-    this.fetchCustomerDetails();
+    // You can fetch initial customer details here if needed
   }
 
-  fetchCustomerDetails(): void {
-   const customerId = 'PA7071'
+  onSubmit(): void {
+    if (this.customerId.trim() !== '') {
+      this.fetchCustomerDetails(this.customerId);
+    }
+  }
+
+  fetchCustomerDetails(customerId: string): void {
     this.apiService.getById(customerId).subscribe(
       (data: any) => {
         this.customer = data.message; 
-        console.log(this.customer)
+        console.log(this.customer);
       },
       (error) => {
         console.error('Error fetching customer details:', error);

@@ -1,4 +1,37 @@
 /* Appointment View Styles */
+/* Style for the navigation container */
+nav {
+  background-color: #333; /* Background color for the navigation */
+  padding: 10px; /* Padding around the navigation */
+}
+
+/* Style for the list items */
+nav ul {
+  list-style-type: none; /* Remove bullet points from the list */
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block; /* Display list items inline */
+  margin-right: 20px; /* Add spacing between list items */
+}
+
+/* Style for the anchor tags */
+nav ul li a {
+  color: #fff; /* Text color for the links */
+  text-decoration: none; /* Remove underline from links */
+  padding: 10px; /* Add padding inside links */
+}
+
+/* Style for the anchor tags on hover */
+nav ul li a:hover {
+  background-color: #555; /* Background color on hover */
+  border-radius: 4px; /* Add border radius on hover */
+}
+
+
+
 h2 {
     font-size: 28px; /* Larger font size for emphasis */
     margin-bottom: 20px; /* Increased margin for separation */

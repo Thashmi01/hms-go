@@ -1,9 +1,19 @@
-<app-dashboard-admin></app-dashboard-admin>
+<nav>
+  <ul>
+      <li><a routerLink="/feedbacks">View All Feedback</a></li>
+      <li><a routerLink="/getbyid">Get By ID</a></li>
+      <li><a routerLink="/deletebyid">Delete By ID</a></li>
+      <li><a routerLink="/appointmentadmin">View All Appointments</a></li>
+      <li><a routerLink="/logout">Logout</a></li>
+
+  </ul>
+</nav>
+<router-outlet></router-outlet>
 
 <div class="background-image" >
 <h1>Feedback View</h1>
-<ul>
-  <li *ngFor="let feedback of feedbackList">
+<ul class="view">
+  <li class="listview" *ngFor="let feedback of feedbackList">
     <h3>{{ feedback.name }}</h3>
     <p><strong>Email:</strong> {{ feedback.email }}</p>
     <p><strong>Subject:</strong> {{ feedback.subject }}</p>

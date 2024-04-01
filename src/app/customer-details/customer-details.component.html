@@ -1,7 +1,20 @@
-<body>
-<app-dashboard-admin></app-dashboard-admin>
+<nav>
+  <ul>
+      <li><a routerLink="/feedbacks">View All Feedback</a></li>
+      <li><a routerLink="/getbyid">Get By ID</a></li>
+      <li><a routerLink="/deletebyid">Delete By ID</a></li>
+      <li><a routerLink="/appointmentadmin">View All Appointments</a></li>
+      <li><a routerLink="/logout">Logout</a></li>
+
+  </ul>
+</nav>
+<router-outlet></router-outlet>
+
 <h1>Customer Details</h1>
 <div class="customer-details-container">
+  <input type="text" [(ngModel)]="customerId" placeholder="Enter Customer ID">
+  <button (click)="onSubmit()">Submit</button>
+
   <div *ngIf="customer">
     <p><strong>First Name:</strong> {{ customer.fname }}</p>
     <p><strong>Last Name:</strong> {{ customer.lname }}</p>
@@ -12,6 +25,5 @@
     <p class="customer-not-found">Customer not found.</p>
   </div>
 </div>
-</body>
 <!-- Right side image -->
 <img src="https://sites.manchester.ac.uk/doubledaycentre/wp-content/uploads/sites/216/2021/07/doctor_patient-1024x642.jpg" alt="Right Image" class="right-image">
