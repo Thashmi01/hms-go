@@ -5,6 +5,38 @@
   min-height: 100vh; /* Ensures the container takes up the full height of the viewport */
    
 }
+/* Style for the navigation container */
+nav {
+  background-color: #333; /* Background color for the navigation */
+  padding: 10px; /* Padding around the navigation */
+}
+
+/* Style for the list items */
+nav ul {
+  list-style-type: none; /* Remove bullet points from the list */
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block; /* Display list items inline */
+  margin-right: 20px; /* Add spacing between list items */
+}
+
+/* Style for the anchor tags */
+nav ul li a {
+  color: #fff; /* Text color for the links */
+  text-decoration: none; /* Remove underline from links */
+  padding: 10px; /* Add padding inside links */
+}
+
+/* Style for the anchor tags on hover */
+nav ul li a:hover {
+  background-color: #555; /* Background color on hover */
+  border-radius: 4px; /* Add border radius on hover */
+}
+
+
 
 /* Feedback View Styles */
 h1 {
@@ -13,12 +45,12 @@ h1 {
     color: #333; /* Heading text color */
   }
   
-  ul {
+  .view {
     list-style-type: none;
     padding: 10px;
   }
   
-  li {
+  .listview {
     margin-bottom: 10px;
     padding: 25px;
     border: 5px solid #ccc;

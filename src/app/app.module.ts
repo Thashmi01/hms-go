@@ -16,7 +16,7 @@ import { RegisterAdminComponent } from './register-admin/register-admin.componen
 import { DashboardCustomerComponent } from './dashboard-customer/dashboard-customer.component';
 import { AppointmentComponent } from './appointment/appointment.component';
 import { CreateFeedbackComponent } from './create-feedback/create-feedback.component';
-import { AppointmentAdminComponent } from './appointment-admin/appointment-admin.component';
+  import { AppointmentAdminComponent } from './appointment-admin/appointment-admin.component';
 import { DashboardAdminComponent } from './dashboard-admin/dashboard-admin.component';
 import { RouterModule } from '@angular/router';
 import { DeleteCustomerDetailsComponent } from './delete-customer-details/delete-customer-details.component';
