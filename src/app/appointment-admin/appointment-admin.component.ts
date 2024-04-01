@@ -9,19 +9,18 @@ import { ApiService, Appointment, Prediction } from '../api.service';
 export class AppointmentAdminComponent implements OnInit {
   appointments: Appointment[] = [];
   predictions: Prediction[] = [];
+  showPredictionTable: boolean = false; // Flag to control prediction table visibility
 
   constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
     this.loadAppointments();
-    this.loadPrediction();
   }
 
   loadAppointments(): void {
     this.apiService.getAppointments().subscribe(
       (data: any) => {
         if (data != null) {
-          // console.log(data)
           const appointmentsArray: Appointment[] = Object.values(data.message);
           this.appointments = appointmentsArray;
         }
@@ -36,9 +35,9 @@ export class AppointmentAdminComponent implements OnInit {
     this.apiService.getPrediction().subscribe(
       (data: any) => {
         if (data != null) {
-          console.log(data)
           const predictionsarray: Prediction[] = Object.values(data.message);
           this.predictions = predictionsarray;
+          this.showPredictionTable = true; // Set flag to true when predictions are loaded
         }
       },
       (error) => {

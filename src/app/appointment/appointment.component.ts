@@ -37,7 +37,7 @@ export class AppointmentComponent implements OnInit {
     }
   
     const name = this.appointmentForm.controls['name'].value;
-    const phoneNumber = this.appointmentForm.controls['phonenumber'].value;
+    const phoneNumber = this.appointmentForm.controls['phoneNumber'].value;
     const purpose = this.appointmentForm.controls['purpose'].value;
     const dep = this.appointmentForm.controls['dep'].value;
     const email = this.appointmentForm.controls['email'].value;

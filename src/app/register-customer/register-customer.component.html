@@ -1,3 +1,4 @@
+<app-dashboard></app-dashboard>
 <div class="container">
   <h2>Patient Registeration</h2>
 
@@ -17,6 +18,9 @@
     <div class="mb-3">
       <label for="password" class="form-label">Password</label>
       <input type="password" class="form-control" id="password" formControlName="password">
+      <div *ngIf="registerForm.get('password')?.errors?.['minlength']" class="text-danger">
+        Password must be at least 6 characters long.<pre></pre>
+      </div>
     </div>
     <div class="mb-3">
       <label for="confirmPassword" class="form-label">Confirm Password</label>

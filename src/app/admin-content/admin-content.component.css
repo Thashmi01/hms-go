@@ -2,7 +2,7 @@
     background-image: url('https://www.dinamicor.com/wp-content/uploads/2021/07/Blog_8-4-21.jpg'); /* Specify the path to your background image */
     background-size: cover;
     background-position: center;
-    min-height: 100vh; /* Ensures the container takes up the full height of the viewport */
+    min-height: 70vh; /* Ensures the container takes up the full height of the viewport */
      
   }
 
@@ -13,14 +13,17 @@
   }
   
   .box {
-    width: calc(20% - 20px); /* Adjust width to fit your design */
+    width: calc(30% - 35px); /* Adjust width to fit your design */
     margin: 10px;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    background-color: #f9f9f9;
+    background-color: #dae9f0;
   }
+  .box:hover {
+  background-color: #f5f5f5; /* Change to your desired hover color */
+}
   
   .box h2 {
     margin-top: 0;
@@ -29,7 +32,7 @@
   
   .box p {
     margin-bottom: 0; /* Remove default margin */
-    color: #666;
+    color: #666666;
     text-align: justify; /* Justify alignment for the paragraph */
   }
   
