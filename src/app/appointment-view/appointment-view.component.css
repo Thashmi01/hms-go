@@ -1,7 +1,46 @@
+.background-container {
+  background-image: url('https://university-sc.com/wp-content/uploads/2019/04/Memorial-Hermann-Header-background.jpg'); /* Specify the path to your background image */
+  background-size: cover;
+  background-position: center;
+  min-height: 45vh; /* Ensures the container takes up the full height of the viewport */
+}
+
+/* Style for the navigation container */
+nav {
+  background-color: #333; /* Background color for the navigation */
+  padding: 10px; /* Padding around the navigation */
+}
+
+/* Style for the list items */
+nav ul {
+  list-style-type: none; /* Remove bullet points from the list */
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block; /* Display list items inline */
+  margin-right: 20px; /* Add spacing between list items */
+}
+
+/* Style for the anchor tags */
+nav ul li a {
+  color: #fff; /* Text color for the links */
+  text-decoration: none; /* Remove underline from links */
+  padding: 10px; /* Add padding inside links */
+}
+
+/* Style for the anchor tags on hover */
+nav ul li a:hover {
+  background-color: #555; /* Background color on hover */
+  border-radius: 4px; /* Add border radius on hover */
+}
+
+
 /* Style for the heading */
 h2 {
     text-align: center; /* Center align the text */
-    color: #333; /* Text color */
+    color: #254048; /* Text color */
     margin-bottom: 20px; /* Add some space below the heading */
   }
   
@@ -14,7 +53,7 @@ h2 {
   
   /* Style for table header */
   .table th {
-    background-color: #f2f2f2; /* Background color for header */
+    background-color:#dde8ec; /* Background color for header */
     padding: 8px; /* Padding inside header cells */
     text-align: left; /* Align text to the left */
     border: 1px solid #ddd; /* Add border around header cells */
@@ -29,6 +68,6 @@ h2 {
   
   /* Style for table rows */
   .table tr:nth-child(even) {
-    background-color: #f9f9f9; /* Alternate row background color */
+    background-color:#dde8ec; /* Alternate row background color */
   }
   

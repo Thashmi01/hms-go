@@ -1,34 +1,131 @@
-<form [formGroup]="appointmentForm" (ngSubmit)="onSubmit()">
-    <div class="mb-3">
-      <label for="name" class="form-label">Name</label>
-      <input type="text" class="form-control" id="name" formControlName="name">
-    </div>
-    <div class="mb-3">
-      <label for="phonenumber" class="form-label">Phone number</label>
-      <input type="text" class="form-control" id="phonenumber" formControlName="phonenumber">
-    </div>
-    <div class="mb-3">
-      <label for="purpose" class="form-label">Purpose</label>
-      <input type="text" class="form-control" id="purpose" formControlName="purpose">
-    </div>
-    <div class="mb-3">
-      <label for="dep" class="form-label">Department</label>
-      <input type="text" class="form-control" id="dep" formControlName="dep">
-    </div>
-    <div class="mb-3">
-      <label for="email" class="form-label">Email</label>
-      <input type="text" class="form-control" id="email" formControlName="email">
-    </div>
-    <div class="mb-3">
-    <label for="date" class="form-label">Email</label>
-    <input type="date" class="form-control" id="date" formControlName="date">
-    </div>
-    <div class="mb-3">
-    <label for="time" class="form-label">Time</label>
-    <input type="time" class="form-control" id="time" formControlName="time">
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-    <div *ngIf="error" class="alert alert-danger mt-3" role="alert">{{ error }}</div>
+<nav>
+  <ul>
+      <li><a routerLink="/appointment">Create Appointment</a></li>
+      <li><a routerLink="/appointments">Appointments</a></li>
+      <li><a routerLink="/feedback">Feedback</a></li>
 
-  </form>
+  </ul>
+</nav>
+<router-outlet></router-outlet>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Appointment View</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0px;
+      background-image: url('https://millenniumphysician.com/wp-content/uploads/slider/cache/8ae6efedb92c5af5b251bdcad8477469/find_doctor_slide3.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .content { 
+      padding: 20px; /* Adjust padding as needed */
+    }
+
+    /* Other styles for your content */
+    .form-label {
+      color: white; /* Example style */
+    }
+
+  .background-image {
+  flex: 1; /* Take up remaining space */
+  background-image: url('https://millenniumphysician.com/wp-content/uploads/slider/cache/8ae6efedb92c5af5b251bdcad8477469/find_doctor_slide3.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 50px;
+  }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+<div class="content">
+  <h2>Book Appointment </h2>
+    <!-- Your form content goes here -->
+
+<div class="form-container">
+  <form [formGroup]="appointmentForm" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" formControlName="name">
+      </div>
+      <div class="mb-3">
+        <label for="phonenumber" class="form-label">Phone number</label>
+        <input type="text" class="form-control" id="phonenumber" formControlName="phonenumber">
+      </div>
+      <div class="mb-3">
+        <label for="purpose" class="form-label">Purpose</label>
+        <input type="text" class="form-control" id="purpose" formControlName="purpose">
+      </div>
+      <div class="mb-3">
+        <label for="dep" class="form-label">Department</label>
+        <input type="text" class="form-control" id="dep" formControlName="dep">
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="text" class="form-control" id="email" formControlName="email">
+      </div>
+      <div class="mb-3">
+      <label for="date" class="form-label">Email</label>
+      <input type="date" class="form-control" id="date" formControlName="date">
+      </div>
+      <div class="mb-3">
+      <label for="time" class="form-label">Time</label>
+      <input type="time" class="form-control" id="time" formControlName="time">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <div *ngIf="error" class="alert alert-danger mt-3" role="alert">{{ error }}</div>
   
+    </form>
+</div>
+ 
+</div>
+</div>
+</body>
+</html>
+
+<h2 class="specialty-heading">Specialty Doctors              </h2>
+<div class="specialty-doctors">
+
+  <div class="doctor">
+    <h3>Cardiologist</h3>
+    <p>Dr. John Doe</p>
+    <p>Availability: Monday to Friday, 9:00 AM - 5:00 PM</p>
+  </div>
+
+  <div class="doctor">
+    <h3>Neurologist</h3>
+    <p>Dr. Jane Smith</p>
+    <p>Availability: Tuesday, Thursday, Saturday, 10:00 AM - 4:00 PM</p>
+  </div>
+
+  <div class="doctor">
+    <h3>Oncologist</h3>
+    <p>Dr. Michael Johnson</p>
+    <p>Availability: Monday, Wednesday, Friday, 8:00 AM - 6:00 PM</p>
+  </div>
+
+  <div class="doctor">
+    <h3>Orthopedic Surgeon</h3>
+    <p>Dr. Emily Brown</p>
+    <p>Availability: Monday to Thursday, 9:00 AM - 3:00 PM</p>
+  </div>
+   
+  <div class="doctor">
+    <h3>Endocrinologist</h3>
+    <p>Dr. David Lee</p>
+    <p>Availability: Monday, Friday, 10:00 AM - 6:00 PM</p>
+  </div>
+
+  <div class="doctor">
+    <h3>Gastroenterologist</h3>
+    <p>Dr. Sarah Patel</p>
+    <p>Availability: Tuesday, Saturday, 8:00 AM - 4:00 PM</p>
+  </div>
+
+</div>

@@ -1,62 +1,90 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('http://localhost:4200/assets/img/slider/3.jpg');
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .container {
-    width: 300px;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-  }
-  
-  h2 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 20px;
-  }
-  
-  .form-group {
-    margin-bottom: 15px;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 5px;
-    color: #555;
-  }
-  
-  input[type="email"],
-  input[type="password"] {
-    width: calc(100% - 22px); /* Adjust for input padding and border */
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  button[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    color: #fff;
-    background-color: grey;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  button[type="submit"]:hover {
-    background-color: #0056b3;
-  }
-  
-  .alert {
-    padding: 10px;
-    font-size: 14px;
-    border-radius: 4px;
-    margin-top: 15px;
-  }
-  
-  .alert-danger {
-    background-color: #f8d7da;
-    border-color: #f5c6cb;
-    color: #721c24;
-  }
-  
+  width: 90%;
+  max-width: 400px; /* Adjust the maximum width as needed */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.container h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 17px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: calc(100% - 22px);
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  color: #fff;
+  background-color: grey;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.alert {
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 4px;
+  margin-top: 15px;
+}
+
+.alert-danger {
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  color: #721c24;
+}
+.spacer {
+  margin-top: 10px; /* Adjust the margin as needed */
+}
+
+.router-link {
+  color: #9c1212; /* Link color */
+  text-decoration: none; /* Remove default underline */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+
+  /* Optional: Add styles for hover effect */
+}
+.router-link:hover {
+  color: #0056b3; /* New color on hover */
+}
+

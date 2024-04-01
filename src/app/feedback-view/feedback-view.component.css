@@ -1,3 +1,11 @@
+.background-image {
+  background-image: url('https://blog.blueoceanbrain.com/hubfs/Stock%20Photos%20%2876%29.png'); /* Specify the path to your background image */
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh; /* Ensures the container takes up the full height of the viewport */
+   
+}
+
 /* Feedback View Styles */
 h1 {
     font-size: 24px;
@@ -7,15 +15,16 @@ h1 {
   
   ul {
     list-style-type: none;
-    padding: 0;
+    padding: 10px;
   }
   
   li {
-    margin-bottom: 20px;
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 25px;
+    border: 5px solid #ccc;
+    border-radius: 15px;
     background-color: #f9f9f9; /* Feedback item background color */
+    max-width: 1000px;
   }
   
   h3 {
