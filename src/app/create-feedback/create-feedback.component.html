@@ -1,4 +1,14 @@
 <!-- create-feedback.component.html -->
+<div class="background-image" >
+<nav>
+  <ul>
+      <li><a routerLink="/appointment">Create Appointment</a></li>
+      <li><a routerLink="/appointments">Appointments</a></li>
+      <li><a routerLink="/feedback">Feedback</a></li>
+
+  </ul>
+</nav>
+<router-outlet></router-outlet>
 
 <div class="container">
     <h2>Create Feedback</h2>
@@ -29,4 +39,4 @@
       <div *ngIf="error" class="alert alert-danger">{{ error }}</div>
     </form>
   </div>
-  
+</div>

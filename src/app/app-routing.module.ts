@@ -27,6 +27,7 @@ import { DashboardAdminComponent } from './dashboard-admin/dashboard-admin.compo
 import { AppointmentAdminComponent } from './appointment-admin/appointment-admin.component';
 import { DeleteCustomerDetailsComponent } from './delete-customer-details/delete-customer-details.component';
 import { HomeComponent } from './home/home.component';
+import { AdminContentAdministrationComponent } from './admin-content-administration/admin-content-administration.component';
 
 
 
@@ -35,7 +36,6 @@ const routes: Routes = [
   { path: 'register', component: RegisterCustomerComponent},
   { path: 'registeradmin', component: RegisterAdminComponent},
   { path: 'customers', component: CustomerListComponent },
-  //{ path: 'customers/:id', component: CustomerDetailsComponent },
   { path: 'appointments', component: AppointmentViewComponent },
   { path: 'feedback', component: CreateFeedbackComponent },
   { path: 'feedbacks', component: FeedbackViewComponent },
@@ -47,6 +47,8 @@ const routes: Routes = [
   { path: 'adminpage', component: DashboardAdminComponent},
   { path: 'getbyid', component: CustomerDetailsComponent},
   { path: 'deletebyid', component: DeleteCustomerDetailsComponent},
+  { path: 'logout',component:HomeComponent},
+  { path: 'administration', component:AdminContentAdministrationComponent},
   { path: '**', redirectTo: '' }, // Redirect to login for any other route
   
 ];
