@@ -1,33 +1,45 @@
-.administration-container {
+.background-image {
+    background-image: url('https://img.freepik.com/free-photo/abstract-textured-backgound_1258-30623.jpg'); /* Specify the path to your background image */
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh; /* Ensures the container takes up the full height of the viewport */
+     
+  }
+.container {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
   
   .administration-section {
+    width: calc(50% - 20px); /* Adjust width as needed */
+    margin-bottom: 30px;
     padding: 20px;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
-  .administration-section h2 {
-    margin-top: 0;
-    color: #333;
+  .left {
+    background-color: #f0dcf7; /* Light gray background for left box */
   }
   
-  .administration-section p {
-    margin-bottom: 10px;
-    color: #666;
+  .right {
+    background-color: #c8ebf0; /* Lighter gray background for right box */
   }
   
-  .administration-section ul {
-    list-style-type: none;
-    padding: 0;
+  /* Clearfix for the last box in a row */
+  .administration-section:nth-child(odd) {
+    margin-right: 20px;
   }
   
-  .administration-section li {
-    margin-bottom: 5px;
+  .administration-section:nth-child(even) {
+    margin-left: 800px;
+  }
+  
+  /* Styling for hover effect */
+  .administration-section:hover {
+    background-color: #f5f5f5; /* Lighter gray background on hover */
+    transition: background-color 0.3s ease;
   }
   

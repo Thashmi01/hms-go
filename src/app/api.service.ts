@@ -76,7 +76,7 @@ export class ApiService {
   }
 
   appointment(profile: Appointment): Observable<any> {
-    return this.http.post<any>(`${this.baseUrl}/appoitnment`, profile);
+    return this.http.post<any>(`${this.baseUrl}/appointment`, profile);
   }
 
   login(profile: Login): Observable<any> {
