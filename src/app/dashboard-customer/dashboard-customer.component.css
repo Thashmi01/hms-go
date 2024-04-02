@@ -24,8 +24,43 @@ nav {
   }
   
   /* Style for the anchor tags on hover */
-  nav ul li a:hover {
+  nav ul .btn:hover {
     background-color: #555; /* Background color on hover */
     border-radius: 4px; /* Add border radius on hover */
   }
-  
+
+  .navigation {
+    position: relative;
+    list-style-type: none;
+    padding: 0;
+}
+
+.navigation li {
+    display: inline-block;
+}
+
+/* .navigation .profile {
+  position: absolute;
+  right: 0;
+} */
+.navigation .profile i{
+font-size: 30px;
+color: #c4c4c4;
+}
+.loginDetails {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #ccc;
+  z-index: 100;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Add a shadow for a popup effect */
+}
+
+.loginDetails.active {
+  display: block;
+}
+
+
+
+

@@ -1,11 +1,17 @@
 <nav>
-    <ul>
-        <li><a routerLink="/appointment">Create Appointment</a></li>
-        <li><a routerLink="/appointments">Appointments</a></li>
-        <li><a routerLink="/feedback">Feedback</a></li>
-        <li><a routerLink="/logout">Logout</a></li>
+    <ul class="navigation">
+        <li><a routerLink="/appointment" class="btn">Create Appointment</a></li>
+        <li><a routerLink="/appointments" class="btn">Appointments</a></li>
+        <li><a routerLink="/feedback" class="btn">Feedback</a></li>
+        <li><a routerLink="/logout" class="btn">Logout</a></li>
+        <li><a class="profile"  (click)="toggleLoginDetails($event)"><i class="fas fa-user-circle"></i></a></li>        
     </ul>
   </nav>
+  <div class="loginDetails" id="loginDetails">
+    <p>Username: {{ username }}</p>
+    <p>Email: {{ email }}</p>
+    <!-- Add more login details as needed -->
+</div>
   <router-outlet></router-outlet>
   
  <app-content></app-content>

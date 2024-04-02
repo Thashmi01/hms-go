@@ -16,7 +16,7 @@ export class AppointmentViewComponent implements OnInit {
   }
 
   loadAppointments(): void {
-    const patientId = 'PA7226'; // Replace '123' with the actual patient ID
+    const patientId = '1'; // Replace '123' with the actual patient ID
     this.apiService.getAppointment(patientId).subscribe(
       (data: any) => { // Use 'any' type to handle object data
         // Convert object data to array
