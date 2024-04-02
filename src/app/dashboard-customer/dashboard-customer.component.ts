@@ -1,14 +1,21 @@
-import { Component,ElementRef} from '@angular/core';
+import { Component,ElementRef, OnInit} from '@angular/core';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-dashboard-customer',
   templateUrl: './dashboard-customer.component.html',
   styleUrl: './dashboard-customer.component.css'
 })
-export class DashboardCustomerComponent {
-  username: string = 'JohnDoe';
-  email: string = 'johndoe@example.com';
+export class DashboardCustomerComponent implements OnInit {
+  email: string = '';
+  patientId: string = '';
 
+  constructor(private authService: AuthService) { }
+  ngOnInit(): void {
+    // Get email and patientId from AuthService
+    this.email = this.authService.getEmail();
+    this.patientId = this.authService.getPatientId();
+  }
   toggleLoginDetails(event: MouseEvent) {
     const loginDetails = document.getElementById('loginDetails');
     if (loginDetails) {

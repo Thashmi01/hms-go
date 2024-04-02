@@ -279,6 +279,23 @@ func ViewFeedback() ([]models.Feedback, error) {
 	return customers, nil
 }
 
+func GetLoginDetails(id string) (models.Customer, error){
+	var patient models.Customer
+	filter := bson.M{"email": id}
+	err := config.Customer_ProfileCollection.FindOne(context.Background(), filter).Decode(&patient)
+
+	if err != nil {
+		if err == mongo.ErrNoDocuments {
+			// Handle the case where no documents are found
+			return patient, fmt.Errorf("no data found for the given ID: %s", id)
+		}
+
+		// Handle other errors
+		return patient, err
+	}
+	return patient, nil
+}
+
 func PredictDisease() ([]models.Prediction, error) {
 	appointment, err := ViewAllAppointments()
 	if err != nil {

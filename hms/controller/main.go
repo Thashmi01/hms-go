@@ -49,7 +49,6 @@ func Appointment(c *gin.Context) {
 func Login(c *gin.Context) {
 	fmt.Println("Checking Profile")
 	var profile models.Login
-	fmt.Println("Created")
 	if err := c.BindJSON(&profile); err != nil {
 		fmt.Println(err)
 		c.JSON(http.StatusBadRequest, gin.H{"error": "Invalid JSON data"})
@@ -62,7 +61,13 @@ func Login(c *gin.Context) {
 	if err != nil {
 		c.JSON(http.StatusBadRequest, err)
 	}
-	c.JSON(http.StatusOK, profile)
+	cust, _ := service.GetLoginDetails(profile.Email)
+	fmt.Println("-----------",cust)
+	customer := models.Customer{
+		Email: cust.Email,
+		PatientID: cust.PatientID,
+	}
+	c.JSON(http.StatusOK, customer)
 
 }
 
@@ -231,3 +236,4 @@ func PredictDisease(c *gin.Context){
 	c.JSON(http.StatusOK, gin.H{"message": predict})
 
 }
+
