@@ -1,31 +1,34 @@
-
-<nav>
-  
-    <ul>
-      <li style="color: rgb(199, 180, 13);float: left;font-size: large;padding-left: 20px;font-style:italic;font-weight: 20;">Unity Hospital</li>
-      <li><a routerLink="/home">Home</a></li>
-      <li><a routerLink="/login">Patient Login</a></li>
-      <li><a routerLink="/admin-login">Admin Login</a></li>
-      <li><a routerLink="/register">Patient Register</a></li>
-      <li><a routerLink="/registeradmin">Admin Register</a></li>
-
-    </ul>
-  </nav>
+	<nav>
+		<ul>
+		  <li style="color: rgb(146, 146, 146);float: left;font-size: 24px;padding-left: 20px;font-style:italic;font-weight: bold;">Unity Hospital</li>
+		  <li><a routerLink="/home">Home</a></li>
+		  <li><a routerLink="/login">Patient Login</a></li>
+		  <li><a routerLink="/admin-login">Admin Login</a></li>
+		  <li><a routerLink="/register">Patient Register</a></li>
+		  <li><a routerLink="/registeradmin">Admin Register</a></li>
+		</ul>
+	</nav>
   <router-outlet></router-outlet>
   
 	<div class="wrapper">
-		<!-- <div id="slide">
-			<div class="slideshow-container">
-				<div class="mySlides fade"> <img src="assets/img/slider/3.jpg" alt="hospital" style="width:100%"> </div>
-			</div>
-		</div> -->
+		
 		<div id="slide">
 			<div class="slideshow-container">
 			  <div class="mySlides fade" *ngFor="let image of images"> 
-				<img [src]="image" alt="hospital" style="width:100%"> 
+				<div class="image-container">
+				  <img [src]="image" alt="hospital" class="blur-image"> 
+				  <div class="overlay"></div>
+				  <div class="text">Welcome To Unity</div>
+				  <div class="text1">Hospital</div>
+				  <div class="text-container">
+					<div class="moving-text">Where there is healing,there is hope.</div>
+					<div class="moving-text">where there is hope,there is a future.</div>
+				  </div>
+				</div>
 			  </div>
 			</div>
 		  </div>
+		  
 		  
 
 		<!--=== Welcome to Unity===-->
@@ -35,8 +38,8 @@
 			<div class="container content-md welcomeSection">
 				<div class="row section1">
 					<div class="headline-center" style="margin-bottom: 60px;">
-						<h2>Welcome To Unity </h2>
-						<div class="line"></div>
+						<!-- <h2>Welcome To Unity </h2>
+						<div class="line"></div> -->
 						<p style="text-align: justify; ">A state-of-the art modern facility in the heart of the Gujarat
 							state, it is spread over 10 acres and has a built-up area of over 440000 square feet.
 							Currently the hospital has 300+ beds with a capacity to expand to 400 beds.</p>
@@ -217,13 +220,13 @@
 
 
 			<!-- Blog part -->
-			<div class="container">
+			<div class="container1">
 				<div class="headline-center" style="margin-bottom: 40px;">
 					<h2>Recent Blogs</h2>
 					<div class="line"></div>
 				</div><!--/end Headline Center-->
 
-				<div class="container" style="margin-bottom: 50px;">
+				<div class="container1" style="margin-bottom: 50px;">
 					<div class="row news-v1">
 						<div class="col-md-4" style="margin-bottom: 40px;">
 							<div class="news-v1-in">

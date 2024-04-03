@@ -2,6 +2,8 @@
 nav {
     background-color: #333; /* Background color for the navigation */
     padding: 10px; /* Padding around the navigation */
+    position: relative;
+    width: 100%;
   }
   
   /* Style for the list items */
