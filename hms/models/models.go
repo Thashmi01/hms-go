@@ -11,10 +11,9 @@ type Customer struct {
 
 type Appoitment struct {
 	Name string `json:"name,omitempty"`
-	// LastName    string `json:"lastname" bson:"lastname"`
+	PatientID string `json:"patientid,omitempty"`
 	Phonenumber string `json:"phonenumber,omitempty"`
 	Purpose     string `json:"purpose,omitempty"`
-	Dep         string `json:"dep,omitempty"`
 	Email       string `json:"email,omitempty"`
 	Date        string `json:"date,omitempty"`
 	Time        string `json:"time,omitempty"`

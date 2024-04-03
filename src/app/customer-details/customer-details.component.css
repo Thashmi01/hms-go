@@ -1,4 +1,10 @@
-
+.background-image {
+  background-image: url('https://www.shutterstock.com/shutterstock/photos/722377342/display_1500/stock-vector-vector-abstract-elegant-white-and-grey-background-abstract-white-pattern-squares-texture-722377342.jpg'); /* Specify the path to your background image */
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh; /* Ensures the container takes up the full height of the viewport */
+   
+}
 /* Style for the navigation container */
 nav {
   background-color: #333; /* Background color for the navigation */

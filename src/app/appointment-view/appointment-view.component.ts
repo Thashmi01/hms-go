@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService, Appointment } from '../api.service';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-appointment-view',
@@ -9,14 +10,16 @@ import { ApiService, Appointment } from '../api.service';
 export class AppointmentViewComponent implements OnInit {
   appointments: Appointment[] = [];
 
-  constructor(private apiService: ApiService) { }
+  constructor(
+    private apiService: ApiService,
+    private authService: AuthService) { }
 
   ngOnInit(): void {
     this.loadAppointments();
   }
 
   loadAppointments(): void {
-    const patientId = '1'; // Replace '123' with the actual patient ID
+    const patientId  = this.authService.getPatientId()
     this.apiService.getAppointment(patientId).subscribe(
       (data: any) => { // Use 'any' type to handle object data
         // Convert object data to array

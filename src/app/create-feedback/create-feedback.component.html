@@ -1,15 +1,6 @@
 <!-- create-feedback.component.html -->
-<div class="background-image" >
-  <nav>
-    <ul>
-        <li><a routerLink="/appointment">Create Appointment</a></li>
-        <li><a routerLink="/appointments">Appointments</a></li>
-        <li><a routerLink="/feedback">Feedback</a></li>
-        <li><a routerLink="/logout">Logout</a></li>
-    </ul>
-  </nav>
-  <router-outlet></router-outlet>
-  
+<app-nav-customer></app-nav-customer>
+
 <div class="container">
     <h2>Create Feedback</h2>
     <form [formGroup]="feedbackForm" (ngSubmit)="onSubmit()">
@@ -39,4 +30,3 @@
       <div *ngIf="error" class="alert alert-danger">{{ error }}</div>
     </form>
   </div>
-</div>
