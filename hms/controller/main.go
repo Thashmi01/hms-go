@@ -184,7 +184,7 @@ func Deletebyid(c *gin.Context) {
 func ViewAppointment(c *gin.Context) {
 	// Get the adminId query parameter from the request
 	adminId := c.DefaultQuery("patientid", "")
-	fmt.Println(adminId)
+	fmt.Println("--------------------",adminId)
 
 	// Check if adminId is empty or not provided
 	if adminId == "" {

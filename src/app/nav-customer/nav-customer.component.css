@@ -1,0 +1,66 @@
+/* Style for the navigation container */
+nav {
+    background-color: #333; /* Background color for the navigation */
+    padding: 10px; /* Padding around the navigation */
+  }
+  
+  /* Style for the list items */
+  nav ul {
+    list-style-type: none; /* Remove bullet points from the list */
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline-block; /* Display list items inline */
+    margin-right: 20px; /* Add spacing between list items */
+  }
+  
+  /* Style for the anchor tags */
+  nav ul li a {
+    color: #fff; /* Text color for the links */
+    text-decoration: none; /* Remove underline from links */
+    padding: 10px; /* Add padding inside links */
+  }
+  
+  /* Style for the anchor tags on hover */
+  nav ul .btn:hover {
+    background-color: #555; /* Background color on hover */
+    border-radius: 4px; /* Add border radius on hover */
+  }
+
+  .navigation {
+    position: relative;
+    list-style-type: none;
+    padding: 0;
+}
+
+.navigation li {
+    display: inline-block;
+}
+
+/* .navigation .profile {
+  position: absolute;
+  right: 0;
+} */
+.navigation .profile i{
+font-size: 30px;
+color: #c4c4c4;
+}
+.loginDetails {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #ccc;
+  z-index: 100;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Add a shadow for a popup effect */
+}
+
+.loginDetails.active {
+  display: block;
+}
+
+
+
+

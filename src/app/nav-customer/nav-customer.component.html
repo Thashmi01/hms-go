@@ -1,0 +1,14 @@
+<nav>
+    <ul class="navigation">
+        <li><a routerLink="/appointment" class="btn">Create Appointment</a></li>
+        <li><a routerLink="/appointments" class="btn">Appointments</a></li>
+        <li><a routerLink="/feedback" class="btn">Feedback</a></li>
+        <li><a routerLink="/logout" class="btn">Logout</a></li>
+        <li><a class="profile"  (click)="toggleLoginDetails($event)"><i class="fas fa-user-circle"></i></a></li>        
+    </ul>
+  </nav>
+<div class="loginDetails" id="loginDetails">
+    <p>Patient ID: {{ patientId }}</p>
+    <p>Email: {{ email }}</p>
+    <!-- Add more login details as needed -->
+</div>

@@ -15,19 +15,21 @@
 <table class="table">
   <thead>
     <tr>
+      <th>Patient Id</th>
+      <th>Name</th>
       <th>Date</th>
       <th>Time</th>
       <th>Purpose</th>
-      <th>Department</th>
       <!-- Add more columns as needed -->
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let appointment of appointments">
+      <td>{{ appointment.patientid }}</td>
+      <td>{{ appointment.name }}</td>
       <td>{{ appointment.date }}</td>
       <td>{{ appointment.time }}</td>
       <td>{{ appointment.purpose }}</td>
-      <td>{{ appointment.dep }}</td>
       <!-- Add more columns as needed -->
     </tr>
   </tbody>

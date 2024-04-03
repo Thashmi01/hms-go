@@ -24,6 +24,7 @@ import { HomeComponent } from './home/home.component';
 import { ContentComponent } from './content/content.component';
 import { AdminContentComponent } from './admin-content/admin-content.component';
 import { AdminContentAdministrationComponent } from './admin-content-administration/admin-content-administration.component';
+import { NavCustomerComponent } from './nav-customer/nav-customer.component';
 
 
 @NgModule({
@@ -47,7 +48,8 @@ import { AdminContentAdministrationComponent } from './admin-content-administrat
     HomeComponent,
     ContentComponent,
     AdminContentComponent,
-    AdminContentAdministrationComponent
+    AdminContentAdministrationComponent,
+    NavCustomerComponent
   ],
   imports: [
     BrowserModule,

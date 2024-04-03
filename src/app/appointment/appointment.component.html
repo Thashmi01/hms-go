@@ -1,12 +1,4 @@
-<nav>
-  <ul>
-      <li><a routerLink="/appointment">Create Appointment</a></li>
-      <li><a routerLink="/appointments">Appointments</a></li>
-      <li><a routerLink="/feedback">Feedback</a></li>
-      <li><a routerLink="/logout">Logout</a></li>
-  </ul>
-</nav>
-<router-outlet></router-outlet>
+<app-nav-customer></app-nav-customer>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -63,15 +55,11 @@
         <input type="text" class="form-control" id="purpose" formControlName="purpose">
       </div>
       <div class="mb-3">
-        <label for="dep" class="form-label">Department</label>
-        <input type="text" class="form-control" id="dep" formControlName="dep">
-      </div>
-      <div class="mb-3">
         <label for="email" class="form-label">Email</label>
         <input type="text" class="form-control" id="email" formControlName="email">
       </div>
       <div class="mb-3">
-      <label for="date" class="form-label">Email</label>
+      <label for="date" class="form-label">Date</label>
       <input type="date" class="form-control" id="date" formControlName="date">
       </div>
       <div class="mb-3">

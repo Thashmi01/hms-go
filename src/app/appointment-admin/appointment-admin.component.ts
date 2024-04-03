@@ -21,6 +21,7 @@ export class AppointmentAdminComponent implements OnInit {
     this.apiService.getAppointments().subscribe(
       (data: any) => {
         if (data != null) {
+          console.log(data.message[0])
           const appointmentsArray: Appointment[] = Object.values(data.message);
           this.appointments = appointmentsArray;
         }

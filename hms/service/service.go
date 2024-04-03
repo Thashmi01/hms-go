@@ -192,7 +192,7 @@ func DeleteById(adminId string) error {
 func ViewAppointment(patientID string) ([]models.Appoitment, error) {
 	//fmt.Println("service")
 	// Define a filter to query appointments by patient ID.
-	filter := bson.M{"name": patientID}
+	filter := bson.M{"patientid": patientID}
 
 	var appointments []models.Appoitment
 	cursor, err := config.Customer_Collection.Find(context.Background(), filter)

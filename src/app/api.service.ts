@@ -19,9 +19,9 @@ export interface Prediction{
 
 export interface Appointment {
   name?: string;
+  patientid?: string;
   phoneNumber?: string;
   purpose?: string;
-  dep?: string;
   email?: string;
   date?: string;
   time?: string;
