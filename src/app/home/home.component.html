@@ -14,11 +14,19 @@
   <router-outlet></router-outlet>
   
 	<div class="wrapper">
-		<div id="slide">
+		<!-- <div id="slide">
 			<div class="slideshow-container">
 				<div class="mySlides fade"> <img src="assets/img/slider/3.jpg" alt="hospital" style="width:100%"> </div>
 			</div>
-		</div>
+		</div> -->
+		<div id="slide">
+			<div class="slideshow-container">
+			  <div class="mySlides fade" *ngFor="let image of images"> 
+				<img [src]="image" alt="hospital" style="width:100%"> 
+			  </div>
+			</div>
+		  </div>
+		  
 
 		<!--=== Welcome to Unity===-->
 		<div class="gap">

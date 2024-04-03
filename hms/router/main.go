@@ -10,7 +10,7 @@ func Router() *gin.Engine {
 	router := gin.Default()
 
 	config := cors.DefaultConfig()
-    config.AllowOrigins = []string{"http://localhost:4200"} // Adjust as needed
+    config.AllowOrigins = []string{"http://localhost:4400"} // Adjust as needed
     router.Use(cors.New(config))
 
 	router.Static("/static", "./")
