@@ -1,39 +1,32 @@
-.background-image {
-  background-image: url('https://png.pngtree.com/background/20220729/original/pngtree-abstract-elegant-white-and-gray-background-with-diagonal-stripes-lines-picture-image_1865305.jpg'); /* Specify the path to your background image */
-  background-size: cover;
-  background-position: center;
-  min-height: 100vh; /* Ensures the container takes up the full height of the viewport */
-   
+
+/* Style for the input field */
+.customer-details-container input[type="text"] {
+  /* Add your styles here */
+  width: 200px; /* Adjust the width as needed */
+  padding: 5px;
+  margin-bottom: 10px;
+  margin-right: 10px;
 }
-/* Style for the navigation container */
-nav {
-    background-color: #333; /* Background color for the navigation */
-    padding: 10px; /* Padding around the navigation */
-  }
-  
-  /* Style for the list items */
-  nav ul {
-    list-style-type: none; /* Remove bullet points from the list */
-    margin: 0;
-    padding: 0;
-  }
-  
-  nav ul li {
-    display: inline-block; /* Display list items inline */
-    margin-right: 20px; /* Add spacing between list items */
-  }
-  
-  /* Style for the anchor tags */
-  nav ul li a {
-    color: #fff; /* Text color for the links */
-    text-decoration: none; /* Remove underline from links */
-    padding: 10px; /* Add padding inside links */
-  }
-  
-  /* Style for the anchor tags on hover */
-  nav ul li a:hover {
-    background-color: #555; /* Background color on hover */
-    border-radius: 4px; /* Add border radius on hover */
-  }
-  
-  
+
+/* Style for the submit button */
+.customer-details-container button {
+  /* Add your styles here */
+  padding: 8px 16px;
+  background-color: #ff3300; /* Example color, change as needed */
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* Style for the customer details */
+.customer-details-container p {
+  /* Add your styles here */
+  margin-bottom: 5px;
+}
+
+/* Style for the error message */
+.customer-not-found {
+  /* Add your styles here */
+  color: red;
+  font-weight: bold;
+}

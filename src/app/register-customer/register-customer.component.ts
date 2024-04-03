@@ -1,14 +1,3 @@
-// import { Component } from '@angular/core';
-
-// @Component({
-//   selector: 'app-register-customer',
-//   templateUrl: './register-customer.component.html',
-//   styleUrl: './register-customer.component.css'
-// })
-// export class RegisterCustomerComponent {
-
-// }
-
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ApiService, Customer } from '../api.service';
@@ -44,15 +33,15 @@ export class RegisterCustomerComponent implements OnInit {
     if (this.registerForm.invalid) {
       return;
     }
-    const fName = this.registerForm.get('fName')?.value; // Corrected form control name
-    const lName = this.registerForm.get('lName')?.value; // Corrected form control name
+    const fname = this.registerForm.get('fName')?.value; // Corrected form control name
+    const lname = this.registerForm.get('lName')?.value; // Corrected form control name
     const email = this.registerForm.get('email')?.value;
     const password = this.registerForm.get('password')?.value;
     const confirmPassword = this.registerForm.get('confirmPassword')?.value; // Corrected form control name
   
     const registerData : Customer = {
-      fName,
-      lName,
+      fname,
+      lname,
       email,
       password,
       confirmPassword

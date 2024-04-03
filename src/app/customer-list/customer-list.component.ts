@@ -1,14 +1,3 @@
-// import { Component } from '@angular/core';
-
-// @Component({
-//   selector: 'app-customer-list',
-//   templateUrl: './customer-list.component.html',
-//   styleUrl: './customer-list.component.css'
-// })
-// export class CustomerListComponent {
-
-// }
-
 import { Component, OnInit } from '@angular/core';
 import { ApiService, Customer } from '../api.service';
 
@@ -28,8 +17,9 @@ export class CustomerListComponent implements OnInit {
 
   fetchCustomers(): void {
     this.apiService.getAllCustomers().subscribe(
-      (data: Customer[]) => {
-        this.customers = data;
+      (data: any) => {
+        console.log(data.message)
+        this.customers = data.message;
       },
       (error) => {
         console.error('Error fetching customers:', error);
