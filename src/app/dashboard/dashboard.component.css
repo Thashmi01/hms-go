@@ -1,9 +1,14 @@
 /* Navigation styling */
 nav {
-  background-color: #535151; /* Background color */
-  padding: 10px 0; /* Padding for the top and bottom */
-  display: flex; /* Use flexbox for layout */
-  justify-content: space-between; /* Align items with space between */
+  background-color: #333;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  z-index: 1000; 
+  margin-top: 0px; /* Remove top margin */
+  top: 0; /* Ensure the navigation bar is positioned flush with the top of the viewport */
 }
 
 ul {
