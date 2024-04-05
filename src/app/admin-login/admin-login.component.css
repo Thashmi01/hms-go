@@ -1,4 +1,4 @@
-.background-image {
+/* .background-image {
   background-image: url('https://miro.medium.com/v2/resize:fit:720/format:webp/1*R23Re_tBaLUS1y6staKAvg.jpeg');
   background-size: 90%;
   background-repeat: no-repeat;
@@ -6,10 +6,23 @@
   height: 100vh;
   display: flex;
   align-items: center;
+} */
+.background-image {
+  background-image: url('https://miro.medium.com/v2/resize:fit:720/format:webp/1*R23Re_tBaLUS1y6staKAvg.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
 .container {
-  margin-left: 135px; /* Adjust the margin to position the container */
+  margin-left: 65%; /* Adjust the margin to position the container */
   width: 325px;
   padding: 20px;
   border-radius: 10px;
