@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 export class DeleteCustomerDetailsComponent {
   customerId: string = '';
   customer!: any;
+  error!: string;
  
 
   constructor(
@@ -37,6 +38,7 @@ export class DeleteCustomerDetailsComponent {
 
       },
       (error) => {
+        this.error = error;
         console.error('Error fetching customer details:', error);
       }
     );

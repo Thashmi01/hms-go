@@ -1,3 +1,13 @@
+.background-image {
+  background-image: url('https://t3.ftcdn.net/jpg/04/87/69/28/360_F_487692869_V8MZ1hLvhXQZKT50EV8Sh13AkdibGJb3.jpg');
+  background-size: 110%;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+}
+
 .container {
   width: 90%;
   max-width: 400px; /* Adjust the maximum width as needed */

@@ -4,12 +4,12 @@ import { Observable } from 'rxjs';
 
 // Define interfaces for the models
 export interface Customer {
-  fName?: string;
-  lName?: string;
+  fname?: string;
+  lname?: string;
   email?: string;
   password?: string;
   confirmPassword?: string;
-  patientID?: string;
+  patientid?: string;
 }
 
 export interface Prediction{

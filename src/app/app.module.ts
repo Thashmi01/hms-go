@@ -25,6 +25,7 @@ import { ContentComponent } from './content/content.component';
 import { AdminContentComponent } from './admin-content/admin-content.component';
 import { AdminContentAdministrationComponent } from './admin-content-administration/admin-content-administration.component';
 import { NavCustomerComponent } from './nav-customer/nav-customer.component';
+import { NavAdminComponent } from './nav-admin/nav-admin.component';
 
 
 @NgModule({
@@ -49,7 +50,8 @@ import { NavCustomerComponent } from './nav-customer/nav-customer.component';
     ContentComponent,
     AdminContentComponent,
     AdminContentAdministrationComponent,
-    NavCustomerComponent
+    NavCustomerComponent,
+    NavAdminComponent
   ],
   imports: [
     BrowserModule,

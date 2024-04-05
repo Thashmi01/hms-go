@@ -1,7 +1,18 @@
+.background-image {
+  background-image: url('https://static.vecteezy.com/system/resources/previews/026/593/022/non_2x/top-view-on-various-medical-equipment-light-blue-background-copy-space-ai-generative-free-photo.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
 .container {
   width: 90%;
   max-width: 400px; /* Adjust the maximum width as needed */
-  margin: 0 auto; /* Center the container horizontally */
+  margin-left: auto; /* Move container to the right */
+  margin-right: 20%; 
+  margin-top: 0px; 
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

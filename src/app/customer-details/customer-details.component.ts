@@ -9,6 +9,7 @@ import { ApiService, Customer } from '../api.service';
 export class CustomerDetailsComponent implements OnInit {
   customerId: string = '';
   customer!: any;
+  error!: string;
 
   constructor(private apiService: ApiService) { }
 
@@ -30,6 +31,8 @@ export class CustomerDetailsComponent implements OnInit {
       },
       (error) => {
         console.error('Error fetching customer details:', error);
+        this.error = error;
+        
       }
     );
   }
