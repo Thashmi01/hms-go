@@ -1,10 +1,22 @@
-/* Container Styles */
+.background-image {
+  background-image: url('https://t3.ftcdn.net/jpg/04/87/69/28/360_F_487692869_V8MZ1hLvhXQZKT50EV8Sh13AkdibGJb3.jpg');
+  background-size: 110%;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+}
+
 .container {
-    max-width: 600px; /* Maximum width for the container */
-    margin: 0 auto; /* Center the container horizontally */
-    padding: 20px; /* Padding for the container */
-  }
-  
+  max-width: 600px; /* Maximum width for the container */
+  margin-right: auto; /* Move container to the left */
+  margin-left: 10%; /* Adjust margin-left to create space between the container and the left edge of the page */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
   /* Heading Styles */
   h2 {
     font-size: 24px; /* Font size for the heading */
